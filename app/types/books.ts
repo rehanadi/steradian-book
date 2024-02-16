@@ -18,3 +18,22 @@ export type Book = {
 }
 
 export type Books = Book[]
+
+export type Filter = {
+  keyword?: string 
+  category?: string
+  stock?: string
+  minimumPrice?: string
+  maximumPrice?: string
+  sort?: string
+  page?: string
+}
+
+export type FilteredBooks = { 
+  books: Books 
+  page: number
+  pages: number
+  count: number
+  start: number
+  end: number
+}

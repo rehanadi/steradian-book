@@ -1,10 +1,12 @@
+import Link from "next/link"
+
 const Header = () => {
   return (
     <header className="header">
     <div className="leading">
-      <a href="#" className="logo">
+      <Link href="/" className="logo">
         Steradian Book
-      </a>
+      </Link>
   
       <nav>
         <a href="#" className="active">Home</a>

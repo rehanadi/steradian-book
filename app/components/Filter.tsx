@@ -1,4 +1,4 @@
-import React from 'react'
+import { FilterStock } from '@/constants/common'
 
 const Filter = () => {
   return (
@@ -37,12 +37,22 @@ const Filter = () => {
         <div className="content">
           <div className="filter-stock">
             <div className="container">
-              <input type="radio" id="filter-stock-all" name="stock" value="" />
+              <input 
+                type="radio" 
+                id="filter-stock-all" 
+                name="stock" 
+                value="" 
+              />
               <label htmlFor="filter-stock-all">Semua</label>
             </div>
             
             <div className="container">
-              <input type="radio" id="filter-stock-available" name="stock" value="available" />
+              <input 
+                type="radio" 
+                id="filter-stock-available" 
+                name="stock" 
+                value={FilterStock.Available} 
+              />
               <label htmlFor="filter-stock-available">Tersedia</label>
             </div>
           </div>

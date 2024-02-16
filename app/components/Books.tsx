@@ -1,18 +1,32 @@
 'use client'
 
+import { useMemo } from "react"
 import { useGetBooksQuery } from "@/store/index"
+import { useSearchParams } from "next/navigation"
+import { getFilterParams } from "@/utils/navigation"
 import Book from "@/components/Book"
-import { type Books } from "@/types/books"
+import { type Books, FilteredBooks } from "@/types/books"
 
 const Books = () => {
-  const { data } = useGetBooksQuery(null)
-  const books: Books = data?.books || []
+  const searchParams = useSearchParams()
+
+  const filter = useMemo(() => {
+    return getFilterParams(searchParams)
+  }, [searchParams])
+
+  const { data, isLoading } = useGetBooksQuery(filter)
+  console.log('data:', isLoading, data)
+  
+  if (isLoading) return <h3>Loading...</h3>
+
+  // const books: Books = data?.books || []
+  const { books, start, end, count, page, pages }: FilteredBooks = data
 
   return (
     <div className="books">
       <div className="sort">
         <div className="title">
-          Menampilkan 1 - 16 dari 147 Produk
+          {`Menampilkan ${start} - ${end} dari ${count} Buku`}
         </div>
 
         <form action="#">
@@ -20,7 +34,7 @@ const Books = () => {
           <select>
             <option value="" disabled>Paling Sesuai</option>
             <option value="newest">Terbaru</option>
-            <option value="cheapest">Termurah</option>
+            <option value="lowest">Termurah</option>
             <option value="highest">Termahal</option>
           </select>
         </form>
@@ -35,19 +49,15 @@ const Books = () => {
       <div className="pagination-container">
         <ul className="pagination">
           <li>
-            <a href="#">«</a>
+            <a href="#" className={`${page === 1 ? 'disabled' : ''}`}>«</a>
           </li>
+          {[...Array(pages).keys()].map(i => (
+            <li>
+              <a href="#" className={`${page === i + 1 ? 'active' : ''}`}>{i + 1}</a>
+            </li>
+          ))}
           <li>
-            <a href="#">1</a>
-          </li>
-          <li>
-            <a href="#">2</a>
-          </li>
-          <li>
-            <a href="#">3</a>
-          </li>
-          <li>
-            <a href="#">»</a>
+            <a href="#" className={`${page === pages ? 'disabled' : ''}`}>»</a>
           </li>
         </ul>
       </div>
