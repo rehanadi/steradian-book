@@ -1,10 +1,11 @@
-/* Components */
-import { Counter } from "../components/Counter/Counter";
+import Catalog from "@/components/Catalog";
+import Hero from "@/components/Hero";
 
 export default function IndexPage() {
-  return <Counter />;
+  return (
+    <>
+      <Hero />
+      <Catalog />
+    </>
+  );
 }
-
-export const metadata = {
-  title: "Redux Toolkit",
-};

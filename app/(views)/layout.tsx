@@ -1,11 +1,9 @@
-/* Components */
-import { Providers } from "@/lib/providers";
+import "../styles/globals.css";
 import { Montserrat } from 'next/font/google';
 import type { Metadata } from 'next'
-
-/* Instruments */
-import styles from "../styles/layout.module.css";
-import "../styles/globals.css";
+import Providers from "@/components/core/providers";
+import Header from "@/components/ui/Header";
+import Footer from "@/components/ui/Footer";
 
 const montserrat = Montserrat({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -22,7 +20,11 @@ export default function RootLayout(props: React.PropsWithChildren) {
     <Providers>
       <html lang="en">
         <body className={montserrat.className}>
-          
+          <Header />
+          <main>
+            {props.children}
+          </main>
+          <Footer />
         </body>
       </html>
     </Providers>
