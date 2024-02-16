@@ -1,4 +1,5 @@
 import { FilterStock } from '@/constants/common'
+import Categories from '@/components/Categories'
 
 const Filter = () => {
   return (
@@ -9,23 +10,7 @@ const Filter = () => {
         </h4>
 
         <div className="content">
-          <ul className="filter-categories">
-            <li>
-              <a href="#" className="active">Semua</a>
-            </li>
-            <li>
-              <a href="#">Diet & Health</a>
-            </li>
-            <li>
-              <a href="#">Social Sciences</a>
-            </li>
-            <li>
-              <a href="#">Dictionary</a>
-            </li>
-            <li>
-              <a href="#">Art & Photography</a>
-            </li>
-          </ul>
+          <Categories />
         </div>
       </div>
 

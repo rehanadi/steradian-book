@@ -494,22 +494,25 @@ img {
   gap: 2rem;
 }
 
-.books .pagination a {
+.books .pagination .btn {
   background-color: var(--color-1);
   font-weight: 500;
   padding: var(--padding-s-xs-v) var(--padding-s-xs-h);
   border: 1px solid rgba(0, 0, 0, .3);
   border-radius: 0.5rem;
+  outline: none;
+  cursor: pointer;
 }
 
-.books .pagination a.active {
+.books .pagination .btn.active {
   background-color: var(--color-3);
   color: var(--color-1);
   border: 1px solid var(--color-1);
 }
 
-.books .pagination a.disabled {
+.books .pagination .btn.disabled {
   background-color: rgba(0, 0, 0, 0.1);
+  cursor: auto;
 }
 
 /* Footer */

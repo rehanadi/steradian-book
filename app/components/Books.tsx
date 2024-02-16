@@ -1,10 +1,11 @@
 'use client'
 
 import { useMemo } from "react"
-import { useGetBooksQuery } from "@/store/index"
 import { useSearchParams } from "next/navigation"
+import { useGetBooksQuery } from "@/store/index"
 import { getFilterParams } from "@/utils/navigation"
 import Book from "@/components/Book"
+import Pagination from "@/components/Pagination"
 import { type Books, FilteredBooks } from "@/types/books"
 
 const Books = () => {
@@ -15,12 +16,12 @@ const Books = () => {
   }, [searchParams])
 
   const { data, isLoading } = useGetBooksQuery(filter)
-  console.log('data:', isLoading, data)
+  // console.log('data:', isLoading, data)
+  const { books, start, end, count, page, pages }: FilteredBooks = data
   
   if (isLoading) return <h3>Loading...</h3>
 
-  // const books: Books = data?.books || []
-  const { books, start, end, count, page, pages }: FilteredBooks = data
+
 
   return (
     <div className="books">
@@ -47,19 +48,7 @@ const Books = () => {
       </div>
 
       <div className="pagination-container">
-        <ul className="pagination">
-          <li>
-            <a href="#" className={`${page === 1 ? 'disabled' : ''}`}>«</a>
-          </li>
-          {[...Array(pages).keys()].map(i => (
-            <li>
-              <a href="#" className={`${page === i + 1 ? 'active' : ''}`}>{i + 1}</a>
-            </li>
-          ))}
-          <li>
-            <a href="#" className={`${page === pages ? 'disabled' : ''}`}>»</a>
-          </li>
-        </ul>
+        <Pagination page={page} pages={pages} />
       </div>
     </div>
   )
