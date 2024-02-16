@@ -4,13 +4,14 @@
     "baseUrl": ".",
     "paths": { 
       "@/*": ["./*"],
-      "@/assets/*": ["./app/assets/*"], 
+      "@/assets/*": ["./public/assets/*"], 
       "@/components/*": ["./app/components/*"],
       "@/constants/*": ["./app/constants/*"],
       "@/data/*": ["./lib/data/*"], 
       "@/services/*": ["./lib/services/*"], 
       "@/store/*": ["./lib/store/*"], 
       "@/styles/*": ["./app/styles/*"], 
+      "@/types/*": ["./app/types/*"], 
       "@/utils/*": ["./lib/utils/*"]
     },
     "target": "ESNext",

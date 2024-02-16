@@ -1,7 +1,13 @@
-import Image from 'next/image'
-import BookImage from '@/assets/images/books/masih-ingatkah-kau-jalan-pulang.jpg'
+'use client'
+
+import { useGetBooksQuery } from "@/store/index"
+import Book from "@/components/Book"
+import { type Books } from "@/types/books"
 
 const Books = () => {
+  const { data } = useGetBooksQuery(null)
+  const books: Books = data?.books || []
+
   return (
     <div className="books">
       <div className="sort">
@@ -21,157 +27,9 @@ const Books = () => {
       </div>
 
       <div className="container">
-        <div className="book">
-          <div className="image-container">
-            <figure className="image">
-              <Image loading="lazy" src={BookImage} alt="Book" />
-            </figure>
-
-            <h6 className="badge">Stok Habis</h6>
-          </div>
-
-          <div className="detail">
-            <a href="#">
-              <h4 className="title">BUKAN BUKU DIET</h4>
-            </a>
-            
-            <p className="author">Alvin Hartanto</p>
-          </div>
-
-          <div className="actions">
-            <div className="price">
-              <div className="sliced-price">Rp118.000</div>
-              <div className="sell-price">Rp88.500</div>
-            </div>
-
-            <i className="favorite fa-regular fa-heart"></i>
-          </div>
-        </div>
-        
-        <div className="book">
-          <div className="image-container">
-            <figure className="image">
-              <Image loading="lazy" src={BookImage} alt="Book" />
-            </figure>
-          </div>
-
-          <div className="detail">
-            <a href="#">
-              <h4 className="title">BUKAN BUKU DIET</h4>
-            </a>
-            
-            <p className="author">Alvin Hartanto</p>
-          </div>
-
-          <div className="actions">
-            <div className="price">
-              <div className="sliced-price">Rp118.000</div>
-              <div className="sell-price">Rp88.500</div>
-            </div>
-
-            <i className="favorite fa-regular fa-heart"></i>
-          </div>
-        </div>
-        
-        <div className="book">
-          <div className="image-container">
-            <figure className="image">
-              <Image loading="lazy" src={BookImage} alt="Book" />
-            </figure>
-          </div>
-
-          <div className="detail">
-            <a href="#">
-              <h4 className="title">BUKAN BUKU DIET</h4>
-            </a>
-            
-            <p className="author">Alvin Hartanto</p>
-          </div>
-
-          <div className="actions">
-            <div className="price">
-              <div className="sliced-price">Rp118.000</div>
-              <div className="sell-price">Rp88.500</div>
-            </div>
-
-            <i className="favorite fa-regular fa-heart"></i>
-          </div>
-        </div>
-        
-        <div className="book">
-          <div className="image-container">
-            <figure className="image">
-              <Image loading="lazy" src={BookImage} alt="Book" />
-            </figure>
-          </div>
-
-          <div className="detail">
-            <a href="#">
-              <h4 className="title">BUKAN BUKU DIET</h4>
-            </a>
-            
-            <p className="author">Alvin Hartanto</p>
-          </div>
-
-          <div className="actions">
-            <div className="price">
-              <div className="sliced-price">Rp118.000</div>
-              <div className="sell-price">Rp88.500</div>
-            </div>
-
-            <i className="favorite fa-regular fa-heart"></i>
-          </div>
-        </div>
-        
-        <div className="book">
-          <div className="image-container">
-            <figure className="image">
-              <Image loading="lazy" src={BookImage} alt="Book" />
-            </figure>
-          </div>
-
-          <div className="detail">
-            <a href="#">
-              <h4 className="title">BUKAN BUKU DIET</h4>
-            </a>
-            
-            <p className="author">Alvin Hartanto</p>
-          </div>
-
-          <div className="actions">
-            <div className="price">
-              <div className="sliced-price">Rp118.000</div>
-              <div className="sell-price">Rp88.500</div>
-            </div>
-
-            <i className="favorite fa-regular fa-heart"></i>
-          </div>
-        </div>
-        
-        <div className="book">
-          <div className="image-container">
-            <figure className="image">
-              <Image loading="lazy" src={BookImage} alt="Book" />
-            </figure>
-          </div>
-
-          <div className="detail">
-            <a href="#">
-              <h4 className="title">BUKAN BUKU DIET</h4>
-            </a>
-            
-            <p className="author">Alvin Hartanto</p>
-          </div>
-
-          <div className="actions">
-            <div className="price">
-              <div className="sliced-price">Rp118.000</div>
-              <div className="sell-price">Rp88.500</div>
-            </div>
-
-            <i className="favorite fa-regular fa-heart"></i>
-          </div>
-        </div>
+        {books.map(book => (
+          <Book book={book} key={book.id} />
+        ))}
       </div>
 
       <div className="pagination-container">
