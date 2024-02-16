@@ -2,8 +2,8 @@ import "../styles/globals.css";
 import { Montserrat } from 'next/font/google';
 import type { Metadata } from 'next'
 import Providers from "@/components/core/Providers";
-import Header from "@/components/ui/Header";
-import Footer from "@/components/ui/Footer";
+import Header from "@/components/layouts/Header";
+import Footer from "@/components/layouts/Footer";
 
 const montserrat = Montserrat({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],

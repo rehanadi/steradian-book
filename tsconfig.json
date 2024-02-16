@@ -7,9 +7,11 @@
       "@/assets/*": ["./app/assets/*"], 
       "@/components/*": ["./app/components/*"],
       "@/constants/*": ["./app/constants/*"],
-      "@/data/*": ["./app/data/*"], 
+      "@/data/*": ["./lib/data/*"], 
+      "@/services/*": ["./lib/services/*"], 
+      "@/store/*": ["./lib/store/*"], 
       "@/styles/*": ["./app/styles/*"], 
-      "@/utils/*": ["./app/utils/*"]
+      "@/utils/*": ["./lib/utils/*"]
     },
     "target": "ESNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
