@@ -1,5 +1,6 @@
-import { heroLeft, heroRight } from '@/constants/images'
 import Image from 'next/image'
+import Search from '@/components/Search'
+import { heroLeft, heroRight } from '@/constants/images'
 
 const Hero = () => {
   return (
@@ -13,13 +14,7 @@ const Hero = () => {
       </p>
 
       <div className="form-container">
-        <form action="#">
-          <i className="fa-solid fa-magnifying-glass"></i>
-  
-          <input type="text" placeholder="Cari Judul Buku, Penulis, Penerbit" />
-  
-          <input type="submit" value="Search" />
-        </form>
+        <Search />
       </div>
 
       <figure className="bg-left">

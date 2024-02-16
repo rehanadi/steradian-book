@@ -66,7 +66,7 @@ export const filterBooks = (booksData: Books, filter: Filter): FilteredBooks => 
   const page = Number(currentPage) || 1
   const pages = Math.ceil(count / limit)
   const start = limit * (page - 1) + 1
-  const end = limit * page
+  const end = count > (limit * page) ? (limit * page) : count 
   
   books = books.slice(start - 1, end)
   

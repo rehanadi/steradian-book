@@ -295,11 +295,13 @@ img {
   gap: 1rem;
 }
 
-.filter-categories a {
+.filter-categories span {
   font-weight: 500;
+  cursor: pointer;
 }
 
-.filter-categories a.active{
+.filter-categories span:hover,
+.filter-categories span.active{
   color: var(--color-3);
 }
 

@@ -1,12 +1,12 @@
 'use client'
 
-import { createQueryString } from '@/lib/utils/navigation'
-import { useRouter, useSearchParams } from 'next/navigation'
 import { useCallback } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
+import { createQueryString } from '@/utils/navigation'
 
-type PaginationFC = React.FC<{ page: number, pages: number }>
+type PaginationFC = React.FC<{ pathname: string, page: number, pages: number }>
 
-const Pagination: PaginationFC = ({ page, pages }) => {
+const Pagination: PaginationFC = ({ pathname, page, pages }) => {
   const router = useRouter()
   const searchParams = useSearchParams()
   
@@ -15,8 +15,8 @@ const Pagination: PaginationFC = ({ page, pages }) => {
     [searchParams]
   )
 
-  const handleClick = (nextPage: number) => {
-    router.push('/?' + queryString('page', String(nextPage)))
+  const redirect = (nextPage: number) => {
+    router.push(pathname + '?' + queryString('page', String(nextPage)))
   }
 
   if (pages <= 1) return
@@ -30,7 +30,7 @@ const Pagination: PaginationFC = ({ page, pages }) => {
           >«</button>
         ) : (
           <button 
-            onClick={() => handleClick(page - 1)} 
+            onClick={() => redirect(page - 1)} 
             className='btn'
           >«</button>
         )}
@@ -39,7 +39,7 @@ const Pagination: PaginationFC = ({ page, pages }) => {
       {[...Array(pages).keys()].map(i => (
         <li key={i}>
           <button 
-            onClick={() => handleClick(i + 1)} 
+            onClick={() => redirect(i + 1)} 
             className={`btn ${page === i + 1 ? 'active' : ''}`}
           >{i + 1}</button>
         </li>
@@ -52,7 +52,7 @@ const Pagination: PaginationFC = ({ page, pages }) => {
           >»</button>
         ) : (
           <button 
-            onClick={() => handleClick(page + 1)} 
+            onClick={() => redirect(page + 1)} 
             className='btn'
           >»</button>
         )}

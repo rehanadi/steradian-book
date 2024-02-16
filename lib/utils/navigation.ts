@@ -14,7 +14,13 @@ export const getFilterParams = (searchParams: URLSearchParams): Filter => {
 
 export const createQueryString = (searchParams: URLSearchParams, name: string, value: string) => {
   const params = new URLSearchParams(searchParams.toString())
-  params.set(name, value)
+  
+  if (value)
+    params.set(name, value)
+  else
+    params.delete(name)
+  
+  if (name !== 'page') params.delete('page')
 
   return params.toString()
 }

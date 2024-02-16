@@ -6,6 +6,7 @@ import { useGetBooksQuery } from "@/store/index"
 import { getFilterParams } from "@/utils/navigation"
 import Book from "@/components/Book"
 import Pagination from "@/components/Pagination"
+import { Sorting } from "@/constants/common"
 import { type Books, FilteredBooks } from "@/types/books"
 
 const Books = () => {
@@ -16,12 +17,10 @@ const Books = () => {
   }, [searchParams])
 
   const { data, isLoading } = useGetBooksQuery(filter)
-  // console.log('data:', isLoading, data)
-  const { books, start, end, count, page, pages }: FilteredBooks = data
   
   if (isLoading) return <h3>Loading...</h3>
 
-
+  const { books = [], start, end, count, page, pages }: FilteredBooks = data
 
   return (
     <div className="books">
@@ -33,10 +32,10 @@ const Books = () => {
         <form action="#">
           <label>Urutkan:</label>
           <select>
-            <option value="" disabled>Paling Sesuai</option>
-            <option value="newest">Terbaru</option>
-            <option value="lowest">Termurah</option>
-            <option value="highest">Termahal</option>
+            <option value="">Paling Sesuai</option>
+            <option value={Sorting.Newest}>Terbaru</option>
+            <option value={Sorting.Lowest}>Termurah</option>
+            <option value={Sorting.Highest}>Termahal</option>
           </select>
         </form>
       </div>
@@ -48,7 +47,7 @@ const Books = () => {
       </div>
 
       <div className="pagination-container">
-        <Pagination page={page} pages={pages} />
+        <Pagination pathname="" page={page} pages={pages} />
       </div>
     </div>
   )
