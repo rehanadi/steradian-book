@@ -1,0 +1,21 @@
+[{
+  "id": 1,
+  "slug": "diet-and-health",
+  "name": "Diet & Health"
+}, {
+  "id": 2,
+  "slug": "science-fiction",
+  "name": "Science Fiction"
+}, {
+  "id": 3,
+  "slug": "love-and-romance",
+  "name": "Love & Romance"
+}, {
+  "id": 4,
+  "slug": "psychology",
+  "name": "Psychology"
+}, {
+  "id": 5,
+  "slug": "horror",
+  "name": "Horror"
+}]

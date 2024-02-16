@@ -1,4 +1,5 @@
-import React from 'react'
+import Image from 'next/image'
+import BookImage from '@/assets/images/books/masih-ingatkah-kau-jalan-pulang.jpg'
 
 const Books = () => {
   return (
@@ -23,7 +24,7 @@ const Books = () => {
         <div className="book">
           <div className="image-container">
             <figure className="image">
-              <img loading="lazy" src="../assets/images/books/masih-ingatkah-kau-jalan-pulang.jpg" alt="Book" />
+              <Image loading="lazy" src={BookImage} alt="Book" />
             </figure>
 
             <h6 className="badge">Stok Habis</h6>
@@ -50,7 +51,7 @@ const Books = () => {
         <div className="book">
           <div className="image-container">
             <figure className="image">
-              <img loading="lazy" src="../assets/images/books/masih-ingatkah-kau-jalan-pulang.jpg" alt="Book" />
+              <Image loading="lazy" src={BookImage} alt="Book" />
             </figure>
           </div>
 
@@ -75,7 +76,7 @@ const Books = () => {
         <div className="book">
           <div className="image-container">
             <figure className="image">
-              <img loading="lazy" src="../assets/images/books/masih-ingatkah-kau-jalan-pulang.jpg" alt="Book" />
+              <Image loading="lazy" src={BookImage} alt="Book" />
             </figure>
           </div>
 
@@ -100,7 +101,7 @@ const Books = () => {
         <div className="book">
           <div className="image-container">
             <figure className="image">
-              <img loading="lazy" src="../assets/images/books/masih-ingatkah-kau-jalan-pulang.jpg" alt="Book" />
+              <Image loading="lazy" src={BookImage} alt="Book" />
             </figure>
           </div>
 
@@ -125,7 +126,7 @@ const Books = () => {
         <div className="book">
           <div className="image-container">
             <figure className="image">
-              <img loading="lazy" src="../assets/images/books/masih-ingatkah-kau-jalan-pulang.jpg" alt="Book" />
+              <Image loading="lazy" src={BookImage} alt="Book" />
             </figure>
           </div>
 
@@ -150,7 +151,7 @@ const Books = () => {
         <div className="book">
           <div className="image-container">
             <figure className="image">
-              <img loading="lazy" src="../assets/images/books/masih-ingatkah-kau-jalan-pulang.jpg" alt="Book" />
+              <Image loading="lazy" src={BookImage} alt="Book" />
             </figure>
           </div>
 

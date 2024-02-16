@@ -1,4 +1,5 @@
-import React from 'react'
+import { heroLeft, heroRight } from '@/constants/images'
+import Image from 'next/image'
 
 const Hero = () => {
   return (
@@ -22,11 +23,11 @@ const Hero = () => {
       </div>
 
       <figure className="bg-left">
-        <img loading="lazy" src="./images/hero-left.png" alt="Hero" />
+        <Image loading='lazy' src={heroLeft} alt="Hero" />
       </figure>
 
       <figure className="bg-right">
-        <img loading="lazy" src="./images/hero-right.png" alt="Hero" />
+        <Image loading='lazy' src={heroRight} alt="Hero" />
       </figure>
     </section>
   )

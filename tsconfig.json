@@ -4,8 +4,12 @@
     "baseUrl": ".",
     "paths": { 
       "@/*": ["./*"],
+      "@/assets/*": ["./app/assets/*"], 
       "@/components/*": ["./app/components/*"],
+      "@/constants/*": ["./app/constants/*"],
+      "@/data/*": ["./app/data/*"], 
       "@/styles/*": ["./app/styles/*"], 
+      "@/utils/*": ["./app/utils/*"]
     },
     "target": "ESNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
