@@ -2,7 +2,7 @@ import Categories from '@/components/Categories'
 import Stock from '@/components/Stock'
 import Price from '@/components/Price'
 
-const Filter = () => {
+const Filtering = () => {
   return (
     <div className="filter">
       <div className="container">
@@ -38,4 +38,4 @@ const Filter = () => {
   )
 }
 
-export default Filter
+export default Filtering

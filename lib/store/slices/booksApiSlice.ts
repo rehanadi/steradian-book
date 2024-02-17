@@ -10,8 +10,8 @@ export const booksApiSlice = apiSlice.injectEndpoints({
           + `?keyword=${filter.keyword}`
           + `&category=${filter.category}`
           + `&stock=${filter.stock}`
-          + `&minimumPrice=${filter.minimumPrice}`
-          + `&maximumPrice=${filter.maximumPrice}`
+          + `&minimum_price=${filter.minimumPrice}`
+          + `&maximum_price=${filter.maximumPrice}`
           + `&sort=${filter.sort}`
           + `&page=${filter.page}`
       },

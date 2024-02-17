@@ -1,3 +1,5 @@
+import { FaFacebookF, FaTwitter, FaInstagram, FaWhatsapp } from 'react-icons/fa'
+
 const Footer = () => {
   return (
     <footer className="footer">
@@ -54,10 +56,21 @@ const Footer = () => {
       </p>
 
       <div className="social">
-        <i className="fa-brands fa-facebook-f"></i>
-        <i className="fa-brands fa-twitter"></i>
-        <i className="fa-brands fa-instagram"></i>
-        <i className="fa-brands fa-whatsapp"></i>
+        <span>
+          <FaFacebookF />
+        </span>
+        
+        <span>
+          <FaTwitter />
+        </span>
+        
+        <span>
+          <FaInstagram />
+        </span>
+
+        <span>
+          <FaWhatsapp />
+        </span>
       </div>
     </div>
   </footer>

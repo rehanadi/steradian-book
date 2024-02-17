@@ -6,8 +6,8 @@ import { useGetBooksQuery } from "@/store/index"
 import { getFilterParams } from "@/utils/navigation"
 import Book from "@/components/Book"
 import Pagination from "@/components/Pagination"
-import { Sorting } from "@/constants/common"
 import { type Books, FilteredBooks } from "@/types/books"
+import Sort from "@/components/Sort"
 
 const Books = () => {
   const searchParams = useSearchParams()
@@ -29,15 +29,7 @@ const Books = () => {
           {`Menampilkan ${start} - ${end} dari ${count} Buku`}
         </div>
 
-        <form action="#">
-          <label>Urutkan:</label>
-          <select>
-            <option value="">Paling Sesuai</option>
-            <option value={Sorting.Newest}>Terbaru</option>
-            <option value={Sorting.Lowest}>Termurah</option>
-            <option value={Sorting.Highest}>Termahal</option>
-          </select>
-        </form>
+        <Sort />
       </div>
 
       <div className="container">

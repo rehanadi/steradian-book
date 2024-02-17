@@ -1,11 +1,13 @@
-import Catalog from "@/components/Catalog";
-import Hero from "@/components/Hero";
+import Hero from "@/components/Hero"
+import Catalog from "@/components/Catalog"
 
-export default function IndexPage() {
+const IndexPage = () => {
   return (
     <>
       <Hero />
       <Catalog />
     </>
-  );
+  )
 }
+
+export default IndexPage

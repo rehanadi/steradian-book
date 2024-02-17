@@ -68,9 +68,14 @@
 body {
   background-color: var(--color-1);
   color: var(--color-2);
-  font-family: 'Montserrat', sans-serif;
   font-size: var(--font-size-s-s);
   line-height: 1.6;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input,
@@ -171,6 +176,11 @@ img {
   border-radius: 1rem;
   outline: none;
   cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.header > .actions > .sign-in:hover {
+  background-color: var(--color-5);
 }
 
 /* Hero */
@@ -218,8 +228,9 @@ img {
   font-size: var(--font-size-s-s);
 }
 
-.hero form > input[type="submit"] {
+.hero form > .search-btn {
   font-size: var(--font-size-s-s);
+  line-height: 1.6;
   background-color: var(--color-5);
   color: var(--color-1);
   padding: var(--padding-s-s-v) var(--padding-s-l-h);
@@ -227,6 +238,11 @@ img {
   border-radius: 4rem;
   outline: none;
   cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.hero form > .search-btn:hover {
+  background-color: var(--color-4);
 }
 
 .hero figure {
@@ -298,6 +314,7 @@ img {
 .filter-categories span {
   font-weight: 500;
   cursor: pointer;
+  transition: all 0.25s ease-in-out;
 }
 
 .filter-categories span:hover,
@@ -328,7 +345,7 @@ img {
   gap: 1rem;
 }
 
-.filter-price > .price-container {
+.filter-price .price-container {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -338,23 +355,24 @@ img {
   border-radius: 0.5rem;
 }
 
-.filter-price > .price-container > span {
+.filter-price .price-container > span {
   font-weight: 500;
 }
 
-.filter-price > .price-container > input {
+.filter-price .price-container > input {
   border: none;
   outline: none;
   width: 100%;
 }
 
-.filter-price > .btn-container {
+.filter-price .btn-container {
   margin-top: 1rem;
 }
 
 .filter-price .btn {
   width: 100%;
   font-size: var(--font-size-s-s);
+  line-height: 1.25;
   background-color: var(--color-3);
   color: var(--color-1);
   padding: var(--padding-s-s-v) var(--padding-s-s-h);
@@ -362,6 +380,11 @@ img {
   border-radius: 1rem;
   outline: none;
   cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.filter-price .btn:hover {
+  background-color: var(--color-11);
 }
 
 /* Books */
@@ -459,13 +482,14 @@ img {
 .books .book .title {
   font-size: var(--font-size-s-s);
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 .books .book .author {
   color: var(--color-8);
   font-size: var(--font-size-s-xs);
   font-weight: 500;
+  line-height: 1.4;
 }
 
 .books .book .price {
@@ -477,6 +501,7 @@ img {
 .books .book .sliced-price {
   font-size: var(--font-size-s-xs);
   font-weight: 500;
+  color: var(--color-8);
   text-decoration: line-through;
 }
 
@@ -493,7 +518,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .books .pagination .btn {
@@ -504,8 +529,10 @@ img {
   border-radius: 0.5rem;
   outline: none;
   cursor: pointer;
+  transition: all 0.25s ease-in-out;
 }
 
+.books .pagination .btn:not(.btn.disabled):hover, 
 .books .pagination .btn.active {
   background-color: var(--color-3);
   color: var(--color-1);
@@ -513,7 +540,7 @@ img {
 }
 
 .books .pagination .btn.disabled {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.05);
   cursor: auto;
 }
 
@@ -632,11 +659,12 @@ img {
   gap: 1.5rem;
 }
 
-.footer > .author > .social i {
-  font-size: var(--font-size-s-m);
+.footer > .author > .social span {
+  font-size: var(--font-size-s-l);
   cursor: pointer;
+  transition: all 0.25s ease-in-out;
 }
 
-.footer > .author > .social i:hover {
-  color: var(--color-7);
+.footer > .author > .social span:hover {
+  color: rgba(255, 255, 255, 0.75);
 }

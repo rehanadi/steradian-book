@@ -31,7 +31,7 @@ const Search = () => {
         placeholder="Cari Judul Buku, Penulis, Penerbit" 
       />
 
-      <input type="submit" value="Search" />
+      <button className="search-btn">Search</button>
     </form>
   )
 }
