@@ -1,4 +1,4 @@
-import { type Filter } from "@/types/books"
+import type { Filter } from "@/types/books"
 
 export const getFilterParams = (searchParams: URLSearchParams): Filter => {
   return { 

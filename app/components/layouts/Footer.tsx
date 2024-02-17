@@ -15,7 +15,7 @@ const Footer = () => {
 
       <div className="links">
         <h3 className="title">
-          Information
+          Informasi
         </h3>
 
         <ul>
@@ -40,7 +40,7 @@ const Footer = () => {
         </h3>
 
         <p className="info">
-          Subscribe for latest updates
+          Subscribe untuk informasi terupdate
         </p>
 
         <form action="#">
@@ -57,19 +57,19 @@ const Footer = () => {
 
       <div className="social">
         <span>
-          <FaFacebookF />
+          <FaFacebookF size={20} />
         </span>
         
         <span>
-          <FaTwitter />
+          <FaTwitter size={20} />
         </span>
         
         <span>
-          <FaInstagram />
+          <FaInstagram size={20} />
         </span>
 
         <span>
-          <FaWhatsapp />
+          <FaWhatsapp size={20} />
         </span>
       </div>
     </div>

@@ -4,7 +4,7 @@ import { useCallback } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { createQueryString } from '@/utils/navigation'
 import { useGetCategoriesQuery } from "@/store/index"
-import { type Categories } from "@/types/categories"
+import type { Categories } from "@/types/categories"
 
 const Categories = () => {
   const router = useRouter()

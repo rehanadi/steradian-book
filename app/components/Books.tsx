@@ -6,8 +6,8 @@ import { useGetBooksQuery } from "@/store/index"
 import { getFilterParams } from "@/utils/navigation"
 import Book from "@/components/Book"
 import Pagination from "@/components/Pagination"
-import { type Books, FilteredBooks } from "@/types/books"
 import Sort from "@/components/Sort"
+import type { Books, FilteredBooks } from "@/types/books"
 
 const Books = () => {
   const searchParams = useSearchParams()

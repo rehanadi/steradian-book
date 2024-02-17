@@ -20,7 +20,7 @@ const Sort = () => {
   }
 
   return (
-    <form onSubmit={e => e.preventDefault()}>
+    <fieldset className="fieldset-sort">
       <label htmlFor="filter-sort">Urutkan:</label>
       <select id="filter-sort" value={sortQuery} onChange={e => redirect(e.target.value)}>
         <option value="">Paling Sesuai</option>
@@ -28,7 +28,7 @@ const Sort = () => {
         <option value={Sorting.Lowest}>Termurah</option>
         <option value={Sorting.Highest}>Termahal</option>
       </select>
-    </form>
+    </fieldset>
   )
 }
 

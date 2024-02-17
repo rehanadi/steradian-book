@@ -1,6 +1,6 @@
 import { apiSlice } from "./apiSlice"
 import { BOOKS_URL, REVALIDATE_SECONDS, Tag } from "@/constants/api"
-import { type Filter } from "@/types/books"
+import type { Filter } from "@/types/books"
 
 export const booksApiSlice = apiSlice.injectEndpoints({
   endpoints: builder => ({

@@ -1,4 +1,4 @@
-import { type NextRequest } from 'next/server'
+import type { NextRequest } from 'next/server'
 import { NextResponse } from 'next/server'
 import { getBooks } from '@/services/books'
 import { getFilterParams } from '@/utils/navigation'

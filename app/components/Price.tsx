@@ -39,25 +39,27 @@ const Price = () => {
 
   return (
     <form className="filter-price" onSubmit={redirect}>
-      <div className="price-container">
-        <span>Rp</span>
+      <fieldset className="fieldset-price">
+        <label htmlFor="minimum-price">Rp</label>
         <input 
+          id="minimum-price"
           type="number"
           value={minimumPrice}
           onChange={e => setMinimumPrice(e.target.value)} 
           placeholder="Minimum" 
         />
-      </div>
+      </fieldset>
 
-      <div className="price-container">
-        <span>Rp</span>
+      <fieldset className="fieldset-price">
+        <label htmlFor="maximum-price">Rp</label>
         <input 
+          id="maximum-price"
           type="number"
           value={maximumPrice}
           onChange={e => setMaximumPrice(e.target.value)} 
           placeholder="Maximum" 
         />
-      </div>
+      </fieldset>
 
       <div className="btn-container">
         <button className="btn">

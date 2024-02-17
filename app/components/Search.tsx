@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react"
 import { useRouter, useSearchParams } from 'next/navigation'
 import { createQueryString } from '@/utils/navigation'
+import { FaSearch } from "react-icons/fa"
 
 const Search = () => {
   const router = useRouter()
@@ -22,7 +23,9 @@ const Search = () => {
 
   return (
     <form onSubmit={redirect}>
-      <i className="fa-solid fa-magnifying-glass"></i>
+      <span>
+        <FaSearch size={25} />
+      </span>
 
       <input 
         type="text" 
@@ -31,7 +34,7 @@ const Search = () => {
         placeholder="Cari Judul Buku, Penulis, Penerbit" 
       />
 
-      <button className="search-btn">Search</button>
+      <button className="btn-search">Search</button>
     </form>
   )
 }

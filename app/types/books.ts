@@ -9,9 +9,9 @@ export type Book = {
   description: string
   is_ready_stock: boolean
   category_slug: string
-  pages?: number
+  pages: number
   publish_date: string
-  publisher?: string
+  publisher: string
   weight?: number
   width?: number
   length?: number

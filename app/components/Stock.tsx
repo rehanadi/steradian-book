@@ -21,7 +21,7 @@ const Stock = () => {
 
   return (
     <div className="filter-stock">
-      <div className="container">
+      <fieldset className="fieldset-stock">
         <input 
           type="radio" 
           id="stock-all" 
@@ -31,9 +31,9 @@ const Stock = () => {
           onChange={() => redirect('')}
         />
         <label htmlFor="stock-all">Semua</label>
-      </div>
+      </fieldset>
       
-      <div className="container">
+      <fieldset className="fieldset-stock">
         <input 
           type="radio" 
           id="stock-available" 
@@ -43,7 +43,7 @@ const Stock = () => {
           onChange={() => redirect(FilterStock.Available)}
         />
         <label htmlFor="stock-available">Tersedia</label>
-      </div>
+      </fieldset>
     </div>
   )
 }

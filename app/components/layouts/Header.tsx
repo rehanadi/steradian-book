@@ -1,4 +1,6 @@
 import Link from "next/link"
+import { FaHeart } from "react-icons/fa"
+import SignInButton from "@/components/SignInButton"
 
 const Header = () => {
   return (
@@ -18,12 +20,12 @@ const Header = () => {
 
       <div className="actions">
         <a href="#" className="favorite">
-          <i className="fa-regular fa-heart"></i>
+          <FaHeart size={20} />
         </a>
 
         <a href="#" className="lang">Lang</a>
 
-        <button className="sign-in">Masuk</button>
+        <SignInButton />
       </div>
     </header>
   )

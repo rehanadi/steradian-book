@@ -1,5 +1,5 @@
 import { PAGINATION_LIMIT, FilterStock, Sorting } from "@/constants/common"
-import { type Books, Filter, FilteredBooks } from "@/types/books"
+import type { Books, Filter, FilteredBooks } from "@/types/books"
 
 export const filterBooks = (booksData: Books, filter: Filter): FilteredBooks => {
   const {
