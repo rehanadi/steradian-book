@@ -1,9 +1,15 @@
-import { FaRegEnvelope, FaGoogle } from 'react-icons/fa'
+import GoogleSignInButton from '@/components/GoogleSignInButton'
+import { authMessages } from "@/constants/auth"
 
-const SignInPage = () => {
+type SignInPageFC = React.FC<{ searchParams: { callbackUrl?: string, error?: string } }>
+
+const SignInPage: SignInPageFC = ({ searchParams }) => {
+  const { callbackUrl = '/', error } = searchParams
+  const authMessage = error ? authMessages[error] || authMessages.default : null
+
   return (
     <section className="sign-in section-padding">
-      <form>
+      <div className='content'>
         <h1 className="title">Sign In to Steradian Book</h1>
 
         {/* 
@@ -20,11 +26,10 @@ const SignInPage = () => {
         <p className="break">Or</p>
         */}
 
-        <button className="btn-google">
-          <FaGoogle size={20} />
-          <span>Continue with Google</span>
-        </button>
-      </form>
+        {authMessage && <h3>{authMessage}</h3>}
+
+        <GoogleSignInButton callbackUrl={callbackUrl} />
+      </div>
 
       <figure>
         <img src="/assets/images/sign-in.png" alt="Sign In" />

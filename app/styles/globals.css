@@ -669,37 +669,38 @@ img {
   gap: 2rem;
 }
 
-.sign-in > form {
+.sign-in > .content {
   flex: 1;
 
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4rem;
 }
 
-.sign-in > form .title {
+.sign-in > .content .title {
+  align-self: center;
   font-size: var(--font-size-d-l);
   font-weight: 700;
 }
 
-.sign-in > form .fieldset-email {
+.sign-in > .content .fieldset-email {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.sign-in > form .fieldset-email label {
+.sign-in > .content .fieldset-email label {
   font-size: var(--font-size-s-xs);
 }
 
-.sign-in > form .fieldset-email input[type="email"] {
+.sign-in > .content .fieldset-email input[type="email"] {
   padding: var(--padding-s-s-v) var(--padding-s-s-h);
   border: 1px solid rgba(0, 0, 0, .3);
   border-radius: 0.5rem;
   outline: none;
 }
 
-.sign-in > form button {
+.sign-in > .content button {
   font-size: var(--font-size-s-s);
   padding: var(--padding-s-m-v) var(--padding-s-l-h);
   border: none;
@@ -714,33 +715,32 @@ img {
   gap: 1rem;
 }
 
-.sign-in > form .btn-email {
+.sign-in > .content .btn-email {
   background-color: var(--color-4);
   color: var(--color-1);
 }
 
-.sign-in > form .btn-email:hover {
+.sign-in > .content .btn-email:hover {
   background-color: var(--color-5);
 }
 
-.sign-in > form .btn-google {
+.sign-in > .content .btn-google {
   background-color: var(--color-10);
   color: var(--color-1);
 }
 
-.sign-in > form .btn-google:hover {
+.sign-in > .content .btn-google:hover {
   background-color: var(--color-13);
 }
 
-.sign-in > form .break {
+.sign-in > .content .break {
   width: 100%;
   text-align: center;
   position: relative;
 }
 
-
-.sign-in > form .break::before,
-.sign-in > form .break::after {
+.sign-in > .content .break::before,
+.sign-in > .content .break::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -750,11 +750,11 @@ img {
   background-color: rgba(0, 0, 0, .3);
 }
 
-.sign-in > form .break::before {
+.sign-in > .content .break::before {
   left: 0;
 }
 
-.sign-in > form .break::after {
+.sign-in > .content .break::after {
   right: 0;
 }
 
