@@ -25,10 +25,8 @@ const FavoriteIcon: FavoriteIconFC = ({ bookId }) => {
   }
 
   const removeFromFavorite = () => {
-    if (!user) return toast.info('Mohon login untuk dapat menambahkan buku favorit')
-
     dispatch(removeFavorite({ user, bookId }))
-    toast.success('Buku berhasil dihapus dari dalam daftar favorit')
+    toast.success('Buku berhasil dihapus dari daftar favorit')
   }
 
   return (
