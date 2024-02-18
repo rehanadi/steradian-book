@@ -15,7 +15,8 @@ Execute below commands:
 
 ```bash
 npm install
-npm run dev
+npm run build
+npm run start
 ```
 
 Make sure application is running at http://localhost:3000
