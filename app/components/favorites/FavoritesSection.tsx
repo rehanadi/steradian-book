@@ -32,7 +32,7 @@ const FavoritesSection = () => {
           /> 
         </figure>
 
-        <h1 className="section-title">{user?.name} Favorite Books</h1>
+        <h1 className="title section-title">{user?.name} Favorite Books</h1>
       </div>
 
       <p className="section-para">Temukan koleksi buku favoritmu disini</p>

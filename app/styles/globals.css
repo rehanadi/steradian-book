@@ -1147,6 +1147,10 @@ img {
 }
 
 @media screen and (max-width: 600px) {
+  .section-title {
+    text-align: center;
+  }
+
   .hero form > .icon-search {
     display: none;
   }
@@ -1206,6 +1210,26 @@ img {
 }
 
 @media screen and (max-width: 500px) {
+  .hero > .form-container {
+    width: 100%;
+  }
+
+  .hero > .para {
+    width: 80%;
+  }
+
+  .hero form {
+    flex-direction: column;
+    align-items: stretch;
+    background: none;
+    gap: 2rem;
+  }
+
+  .hero form > input[type="text"] {
+    border-radius: 1rem;
+    width: 100%;    
+  }
+
   .books > .container {
     grid-template-columns: repeat(1, minmax(20rem, 25rem));
     justify-content: center;
