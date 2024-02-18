@@ -6,6 +6,7 @@
       "@/*": ["./*"],
       "@/assets/*": ["./public/assets/*"], 
       "@/components/*": ["./app/components/*"],
+      "@/config/*": ["./lib/config/*"], 
       "@/constants/*": ["./app/constants/*"],
       "@/data/*": ["./lib/data/*"], 
       "@/services/*": ["./lib/services/*"], 

@@ -1,4 +1,4 @@
-import { AuthMessages } from "@/types/auth"
+import type { AuthMessages } from "@/types/auth"
 
 export const authMessages = {
   Signin: 'Try signing in with a different account.',

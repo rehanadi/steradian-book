@@ -1,16 +1,16 @@
 import React from 'react'
-import Filtering from '@/components/Filtering'
-import Books from './Books'
+import FilterSection from '@/components/filter/FilterSection'
+import BooksSection from '@/components/books/BooksSection'
 
 const Catalog = () => {
   return (
     <section className="catalog section-padding">
       <aside>
-        <Filtering />
+        <FilterSection />
       </aside>
 
       <div className="content">
-        <Books />
+        <BooksSection />
       </div>
     </section>
   )

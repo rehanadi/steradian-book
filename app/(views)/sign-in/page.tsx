@@ -1,4 +1,4 @@
-import GoogleSignInButton from '@/components/GoogleSignInButton'
+import GoogleSignInButton from '@/components/auth/GoogleSignInButton'
 import { authMessages } from "@/constants/auth"
 
 type SignInPageFC = React.FC<{ searchParams: { callbackUrl?: string, error?: string } }>

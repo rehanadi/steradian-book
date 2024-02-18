@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import Search from '@/components/Search'
-import { heroLeft, heroRight } from '@/constants/images'
+import Search from '@/components/filter/Search'
+import { heroLeftImage, heroRightImage } from '@/constants/images'
 
 const Hero = () => {
   return (
@@ -18,11 +18,11 @@ const Hero = () => {
       </div>
 
       <figure className="bg-left">
-        <Image loading='lazy' src={heroLeft} alt="Hero" />
+        <Image loading='lazy' src={heroLeftImage} alt="Hero" />
       </figure>
 
       <figure className="bg-right">
-        <Image loading='lazy' src={heroRight} alt="Hero" />
+        <Image loading='lazy' src={heroRightImage} alt="Hero" />
       </figure>
     </section>
   )

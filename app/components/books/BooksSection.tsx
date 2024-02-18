@@ -4,12 +4,12 @@ import { useMemo } from "react"
 import { useSearchParams } from "next/navigation"
 import { useGetBooksQuery } from "@/store/index"
 import { getFilterParams } from "@/utils/navigation"
-import Book from "@/components/Book"
-import Pagination from "@/components/Pagination"
-import Sort from "@/components/Sort"
-import type { Books, FilteredBooks } from "@/types/books"
+import BookItem from "@/components/books/BookItem"
+import Pagination from "@/components/filter/Pagination"
+import Sort from "@/components/filter/Sort"
+import type { FilteredBooks } from "@/types/books"
 
-const Books = () => {
+const BooksSection = () => {
   const searchParams = useSearchParams()
 
   const filter = useMemo(() => {
@@ -23,7 +23,7 @@ const Books = () => {
   const { books = [], start, end, count, page, pages }: FilteredBooks = data
 
   return (
-    <div className="books">
+    <section className="books">
       <div className="sort">
         <div className="title">
           {`Menampilkan ${start} - ${end} dari ${count} Buku`}
@@ -34,15 +34,15 @@ const Books = () => {
 
       <div className="container">
         {books.map(book => (
-          <Book book={book} key={book.id} />
+          <BookItem book={book} key={book.id} />
         ))}
       </div>
 
       <div className="pagination-container">
         <Pagination pathname="" page={page} pages={pages} />
       </div>
-    </div>
+    </section>
   )
 }
 
-export default Books
+export default BooksSection

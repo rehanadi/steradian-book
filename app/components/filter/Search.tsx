@@ -1,9 +1,9 @@
 'use client'
 
 import { useState, useCallback } from "react"
+import { FaSearch } from "react-icons/fa"
 import { useRouter, useSearchParams } from 'next/navigation'
 import { createQueryString } from '@/utils/navigation'
-import { FaSearch } from "react-icons/fa"
 
 const Search = () => {
   const router = useRouter()

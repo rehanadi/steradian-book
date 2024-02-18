@@ -1,14 +1,16 @@
-import "../styles/globals.css";
-import { Montserrat } from 'next/font/google';
+import "../styles/globals.css"
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify'
+import { Montserrat } from 'next/font/google'
+import Providers from "@/components/core/Providers"
+import Header from "@/components/section/Header"
+import Footer from "@/components/section/Footer"
 import type { Metadata } from 'next'
-import Providers from "@/components/core/Providers";
-import Header from "@/components/layouts/Header";
-import Footer from "@/components/layouts/Footer";
 
 const montserrat = Montserrat({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   subsets: ['latin']
-});
+})
 
 export const metadata: Metadata = {
   title: 'Steradian Book',
@@ -25,8 +27,9 @@ export default function RootLayout(props: React.PropsWithChildren) {
             {props.children}
           </main>
           <Footer />
+          <ToastContainer position='bottom-right' />
         </body>
       </html>
     </Providers>
-  );
+  )
 }

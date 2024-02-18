@@ -4,9 +4,9 @@ import { formatPrice } from '@/utils/currency'
 import { blurImage } from '@/constants/images'
 import type { Book } from '@/types/books'
 
-type BookFC = React.FC<{ book: Book }>
+type BookItemFC = React.FC<{ book: Book }>
 
-const Book: BookFC = ({ book }) => {
+const BookItem: BookItemFC = ({ book }) => {
   return (
     <div className="book">
       <div className="info">
@@ -44,4 +44,4 @@ const Book: BookFC = ({ book }) => {
   )
 }
 
-export default Book
+export default BookItem

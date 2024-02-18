@@ -1,9 +1,9 @@
 'use client'
 
-import { Book } from "@/app/types/books"
-import BookDetail from "@/components/BookDetail"
-import BookInfo from "@/components/BookInfo"
-import { useGetBookBySlugQuery } from "@/lib/store"
+import { useGetBookBySlugQuery } from "@/store/index"
+import BookDetail from "@/components/books/BookDetail"
+import BookInfo from "@/components/books/BookInfo"
+import type { Book } from "@/types/books"
 
 type BookPageFC = React.FC<{ params: { slug: string } }>
 

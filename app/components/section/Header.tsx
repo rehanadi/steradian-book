@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { FaHeart } from "react-icons/fa"
-import SignInButton from "@/components/SignInButton"
+import AuthUserButton from "@/components/auth/AuthUserButton"
 
 const Header = () => {
   return (
@@ -25,7 +25,7 @@ const Header = () => {
 
         <a href="#" className="lang">Lang</a>
 
-        <SignInButton />
+        <AuthUserButton />
       </div>
     </header>
   )

@@ -1,5 +1,5 @@
-import Hero from "@/components/Hero"
-import Catalog from "@/components/Catalog"
+import Hero from "@/components/section/Hero"
+import Catalog from "@/components/layout/Catalog"
 
 const IndexPage = () => {
   return (

@@ -1,8 +1,7 @@
 'use client'
 
-import { useState, useCallback } from "react"  
+import { useState } from "react"  
 import { useRouter, useSearchParams } from 'next/navigation'
-import { createQueryString } from '@/utils/navigation'
 
 const Price = () => {
   const router = useRouter()

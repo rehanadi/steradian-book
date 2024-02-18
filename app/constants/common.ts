@@ -1,5 +1,9 @@
 export const PAGINATION_LIMIT: number = 12
 
+export enum Slice {
+  Favorites = 'favorites'
+}
+
 export enum FilterStock {
   Available = 'available'
 }

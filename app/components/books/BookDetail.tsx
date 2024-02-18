@@ -1,8 +1,8 @@
 import Image from "next/image"
-import { FaRegHeart } from "react-icons/fa"
 import { blurImage } from "@/constants/images"
+import { formatPrice } from "@/utils/currency"
+import Favorite from "@/components/ui/Favorite"
 import type { Book } from "@/types/books"
-import { formatPrice } from "@/lib/utils/currency"
 
 type BookDetailFC = React.FC<{ book: Book }>
 
@@ -29,9 +29,7 @@ const BookDetail: BookDetailFC = ({ book }) => {
 
         <div className="selling-price">{formatPrice(book.selling_price)}</div>
 
-        <span className="favorite">
-          <FaRegHeart size={75} />
-        </span>
+        <Favorite bookId={book.id} />
       </div>
     </section>
   )

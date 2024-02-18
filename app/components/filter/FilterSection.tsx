@@ -1,10 +1,10 @@
-import Categories from '@/components/Categories'
-import Stock from '@/components/Stock'
-import Price from '@/components/Price'
+import Categories from '@/components/filter/Categories'
+import Stock from '@/components/filter/Stock'
+import Price from '@/components/filter/Price'
 
-const Filtering = () => {
+const FilterSection = () => {
   return (
-    <div className="filter">
+    <section className="filter">
       <div className="container">
         <h4 className="title">
           Buku
@@ -34,8 +34,8 @@ const Filtering = () => {
           <Price />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
-export default Filtering
+export default FilterSection
