@@ -8,10 +8,10 @@ const IndexPage = () => {
   return (
     <Suspense>
       <Hero />
-        <Catalog 
-          Aside={FilterSection} 
-          Main={BooksSection} 
-        />
+      <Catalog 
+        Aside={FilterSection} 
+        Main={BooksSection} 
+      />
     </Suspense>
   )
 }
