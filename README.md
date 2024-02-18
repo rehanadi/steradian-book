@@ -11,8 +11,7 @@ git clone git@github.com:rehanadi/steradian-book.git steradian-book
 cd steradian-book
 
 npm install
-npm run build
-npm run start
+npm run dev
 ```
 
 Make sure application is running at http://localhost:3000
