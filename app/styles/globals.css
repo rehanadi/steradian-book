@@ -1144,6 +1144,10 @@ img {
   .book-info .additional-info {
     grid-template-columns: 1fr 2fr;
   }
+
+  .sign-in figure {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 600px) {
