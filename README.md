@@ -21,6 +21,6 @@ npm run start
 
 Make sure application is running at http://localhost:3000
 
-If not then please change the value of NEXTAUTH_URL into running hostname.
+If not then please change the value of NEXTAUTH_URL in .env file into running hostname.
 
 If you have any questions feel free to reach me at rehanadipurwana@gmail.com.
