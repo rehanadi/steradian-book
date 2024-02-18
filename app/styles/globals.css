@@ -73,6 +73,9 @@ body {
   color: var(--color-2);
   font-size: var(--font-size-s-s);
   line-height: 1.6;
+}
+
+main {
   min-height: 100vh;
 }
 
@@ -302,7 +305,7 @@ img {
   flex: 2;
 }
 
-.catalog > main {
+.catalog > .content {
   flex: 5;
 }
 
@@ -815,6 +818,10 @@ img {
 .favorites .books {
   align-self: stretch;
   margin: 2rem 0 4rem;
+}
+
+.favorites > .books > .container {
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
 /* Footer */

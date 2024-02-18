@@ -24,7 +24,7 @@ const BooksSection = () => {
   const { books = [], start, end, count, page, pages }: FilteredBooks = data
 
   return (
-    <section className="books">
+    <section className="books" key={JSON.stringify(filter)}>
       <div className="sort">
         <div className="title">
           {`Menampilkan ${start} - ${end} dari ${count} Buku`}

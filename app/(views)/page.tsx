@@ -10,7 +10,7 @@ const IndexPage = () => {
       <Hero />
       <Catalog 
         Aside={FilterSection} 
-        Main={BooksSection} 
+        Content={BooksSection} 
       />
     </Suspense>
   )

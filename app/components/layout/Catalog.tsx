@@ -1,14 +1,14 @@
-type CatalogFC = React.FC<{ Aside: React.FC, Main: React.FC }>
+type CatalogFC = React.FC<{ Aside: React.FC, Content: React.FC }>
 
-const Catalog: CatalogFC = ({ Aside, Main }) => {
+const Catalog: CatalogFC = ({ Aside, Content }) => {
   return (
     <section className="catalog section-padding">
       <aside>
         <Aside />
       </aside>
-      <main>
-        <Main />
-      </main>
+      <div className="content">
+        <Content />
+      </div>
     </section>
   )
 }
