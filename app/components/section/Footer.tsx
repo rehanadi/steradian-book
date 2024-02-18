@@ -6,10 +6,10 @@ const Footer = () => {
       <div className="content">
         <div className="info">
           <p>
-            <strong>Steradian Book</strong> adalah Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam suscipit non ducimus sunt at, qui repellat officia nostrum delectus.
+            <strong>Steradian Book</strong> adalah platform yang menyediakan berbagai jenis buku terupdate dengan berbagai macam kategori favorit dan harga potongan yang menarik.
           </p>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, impedit?
+          Raih kesempatan untuk dapat diskon dan potongan harga dengan Promo Buku Steradian.
           </p>
         </div>
 
@@ -43,7 +43,7 @@ const Footer = () => {
             Subscribe untuk informasi terupdate
           </p>
 
-          <form action="#">
+          <form action="/">
             <input type="email" placeholder="Email address" />
             <input type="submit" value="Subscribe" />
           </form>

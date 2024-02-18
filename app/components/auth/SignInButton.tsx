@@ -6,7 +6,7 @@ const SignInButton = () => {
   return (
     <button
       onClick={() => signIn()} 
-      className="btn-sign-in"
+      className="btn-sign"
     >Masuk</button>
   )
 }

@@ -6,7 +6,7 @@ const SignOutButton = () => {
   return (
     <button
       onClick={() => signOut()} 
-      className="btn-sign-in"
+      className="btn-sign"
     >Keluar</button>
   )
 }

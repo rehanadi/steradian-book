@@ -23,7 +23,7 @@ const Search = () => {
 
   return (
     <form onSubmit={redirect}>
-      <span>
+      <span className="icon-search">
         <FaSearch size={25} />
       </span>
 

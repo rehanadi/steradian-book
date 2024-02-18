@@ -1,17 +1,14 @@
-import React from 'react'
-import FilterSection from '@/components/filter/FilterSection'
-import BooksSection from '@/components/books/BooksSection'
+type CatalogFC = React.FC<{ Aside: React.FC, Main: React.FC }>
 
-const Catalog = () => {
+const Catalog: CatalogFC = ({ Aside, Main }) => {
   return (
     <section className="catalog section-padding">
       <aside>
-        <FilterSection />
+        <Aside />
       </aside>
-
-      <div className="content">
-        <BooksSection />
-      </div>
+      <main>
+        <Main />
+      </main>
     </section>
   )
 }

@@ -1,31 +1,39 @@
+'use client'
+
+import { useState } from 'react'
 import Link from "next/link"
-import { FaHeart } from "react-icons/fa"
-import AuthUserButton from "@/components/auth/AuthUserButton"
+import UserActions from "@/components/auth/UserActions"
 
 const Header = () => {
+  const [showNav, setShowNav] = useState(false)
+
   return (
     <header className="header">
       <div className="leading">
         <Link href="/" className="logo">
           Steradian Book
         </Link>
-    
-        <nav>
-          <a href="#" className="active">Home</a>
-          <a href="#products">Buku</a>
-          <a href="#footer">Tentang Kami</a>
-          <a href="#footer">Kontak</a>
-        </nav>
       </div>
 
-      <div className="actions">
-        <a href="#" className="favorite">
-          <FaHeart size={20} />
-        </a>
+      <div className={`collapse ${showNav ? 'show-nav' : ''}`}>
+        <nav>
+          <Link href="/" className="active">Buku</Link>
+          <Link href="/about-us">Tentang Kami</Link>
+          <Link href="/contact">Kontak</Link>
+        </nav>
 
-        <a href="#" className="lang">Lang</a>
+        <div className="actions">
+          <UserActions />
+        </div>
+      </div>
 
-        <AuthUserButton />
+      <div 
+        onClick={() => setShowNav(!showNav)}
+        className="hamburger" 
+      >
+        <div className={`hamburger-line ${showNav ? 'hamburger-line-1' : ''}`}></div>
+        <div className={`hamburger-line ${showNav ? 'hamburger-line-2' : ''}`}></div>
+        <div className={`hamburger-line ${showNav ? 'hamburger-line-3' : ''}`}></div>
       </div>
     </header>
   )

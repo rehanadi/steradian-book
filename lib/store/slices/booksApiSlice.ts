@@ -22,6 +22,11 @@ export const booksApiSlice = apiSlice.injectEndpoints({
       query: (slug: string) => `${BOOKS_URL}/${slug}`,
       providesTags: (result, error, arg) => [{ type: Tag.Books, id: arg }],
       keepUnusedDataFor: REVALIDATE_SECONDS
+    }),
+    getUserBooks: builder.query({
+      query: (userBookIds: number[]) => `${BOOKS_URL}/user?book_ids=${userBookIds.join(',')}`,
+      providesTags: (result, error, arg) => [{ type: Tag.Books, id: String(arg) }],
+      keepUnusedDataFor: REVALIDATE_SECONDS
     })
   })
 })
@@ -29,4 +34,5 @@ export const booksApiSlice = apiSlice.injectEndpoints({
 export const {
   useGetBooksQuery,
   useGetBookBySlugQuery,
+  useGetUserBooksQuery
 } = booksApiSlice
