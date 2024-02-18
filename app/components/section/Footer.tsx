@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { FaFacebookF, FaTwitter, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 
 const Footer = () => {
@@ -20,16 +21,16 @@ const Footer = () => {
 
           <ul>
             <li>
-              <a href="#">Lokasi</a>
+              <Link href="/">Lokasi</Link>
             </li>
             <li>
-              <a href="#">FAQ</a>
+              <Link href="/">FAQ</Link>
             </li>
             <li>
-              <a href="#">Tentang Kami</a>
+              <Link href="/">Tentang Kami</Link>
             </li>
             <li>
-              <a href="#">Kontak</a>
+              <Link href="/">Kontak</Link>
             </li>
           </ul>
         </div>

@@ -16,9 +16,10 @@ const BooksSection = () => {
     return getFilterParams(searchParams)
   }, [searchParams])
 
-  const { data, isLoading } = useGetBooksQuery(filter)
+  const { data, isLoading, error } = useGetBooksQuery(filter)
   
-  if (isLoading) return <h3>Loading...</h3>
+  if (isLoading) return <section><h3>Loading...</h3></section>
+  if (error) return <section><h3>Something went wrong</h3></section>
 
   const { books = [], start, end, count, page, pages }: FilteredBooks = data
 

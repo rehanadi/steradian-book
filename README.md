@@ -1,29 +1,19 @@
-# Redux Toolkit TypeScript Example
-
-This example shows how to integrate Next.js with [Redux Toolkit](https://redux-toolkit.js.org).
-
-The **Redux Toolkit** is a standardized way to write Redux logic (create actions and reducers, setup the store with some default middlewares like redux devtools extension). This example demonstrates each of these features with Next.js
-
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-redux&project-name=with-redux&repository-name=with-redux)
-
 ## How to use
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+Use latest Node.js LTS version.
+
+Copy .env file that has been sent to the hiring PIC into root project folder.
+
+Execute below commands:
 
 ```bash
-npx create-next-app --example with-redux with-redux-app
+npm install
+npm run build
+npm run start
 ```
 
-```bash
-yarn create next-app --example with-redux with-redux-app
-```
+Make sure application is running at http://localhost:3000
 
-```bash
-pnpm create next-app --example with-redux with-redux-app
-```
+If not then please change the value of NEXTAUTH_URL into running hostname.
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+If you have any questions feel free to reach me at rehanadipurwana@gmail.com.

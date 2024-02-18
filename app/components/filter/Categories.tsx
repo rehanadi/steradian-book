@@ -16,10 +16,11 @@ const Categories = () => {
     [searchParams]
   )
 
-  const { data, isLoading } = useGetCategoriesQuery(null)
+  const { data, isLoading, error } = useGetCategoriesQuery(null)
   
-  if (isLoading) return <h3>Loading...</h3>
-  
+  if (isLoading) return <section><h3>Loading...</h3></section>
+  if (error) return <section><h3>Something went wrong</h3></section>
+
   const { categories = [] }: { categories: Categories } = data
 
   const redirect = (categorySlug: string) => {

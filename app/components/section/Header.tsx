@@ -18,8 +18,8 @@ const Header = () => {
       <div className={`collapse ${showNav ? 'show-nav' : ''}`}>
         <nav>
           <Link href="/" className="active">Buku</Link>
-          <Link href="/about-us">Tentang Kami</Link>
-          <Link href="/contact">Kontak</Link>
+          <Link href="/">Tentang Kami</Link>
+          <Link href="/">Kontak</Link>
         </nav>
 
         <div className="actions">

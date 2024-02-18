@@ -12,9 +12,10 @@ const FavoritesSection = () => {
   const user = session?.user || null
 
   const userBookIds = useSelector(state => getUserBookIds(state, user?.email || ''))
-  const { data, isLoading } = useGetUserBooksQuery(userBookIds)
+  const { data, isLoading, error } = useGetUserBooksQuery(userBookIds)
   
-  if (isLoading) return <h3>Loading...</h3>
+  if (isLoading) return <section className="section-padding"><h3>Loading...</h3></section>
+  if (error) return <section className="section-padding"><h3>Something went wrong</h3></section>
 
   const { books = [] }: FilteredBooks = data
 
