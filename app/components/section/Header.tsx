@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.leading}>
-        <Link href="/" className="logo">
+        <Link href="/" className={styles.logo}>
           Steradian Book
         </Link>
       </div>
