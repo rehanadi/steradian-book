@@ -1,0 +1,421 @@
+.books {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.books > .sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.books > .sort > .fieldsetSort {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.books > .sort > .fieldsetSort > select {
+  border: 1px solid rgba(0, 0, 0, .3);
+  border-radius: 0.5rem;
+  outline: none;
+  padding: var(--padding-s-s-v) var(--padding-s-s-h);
+}
+
+.books > .container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(20rem, 1fr));
+  gap: 2rem;
+}
+
+.books .book {
+  background-color: var(--color-1);
+  padding: var(--padding-d-m-v) var(--padding-d-s-h);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  box-shadow: 0 8px 15px 0 rgba(67, 97, 154, .09);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.books .book .info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.books .book .info .title {
+  color: var(--color-7);
+  transition: all 0.25s ease-in-out;
+}
+
+.books .book .info .title:hover {
+  color: var(--color-2);
+}
+
+.books .book .imageContainer {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.books .book figure {
+  position: relative;
+  width: 100%;
+  height: 22rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.books .book figure img {
+  border-radius: 0.5rem;
+  transition: all 0.25s ease-in-out;
+}
+
+.books .book figure:hover img {
+  transform: scale(1.1);
+}
+
+.books .book .badge {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  color: var(--color-1);
+  background-color: var(--color-10);
+  font-size: var(--font-size-s-xxs);
+  font-weight: 600;
+  padding: 2px 5px;
+  border-radius: 0.3rem;
+}
+
+.books .book .title {
+  font-size: var(--font-size-s-s);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.books .book .author {
+  color: var(--color-8);
+  font-size: var(--font-size-s-xs);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.books .book .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.books .book .slicedPrice {
+  font-size: var(--font-size-s-xs);
+  font-weight: 500;
+  color: var(--color-8);
+  text-decoration: line-through;
+}
+
+.books .book .sellingPrice {
+  color: var(--color-4);
+  font-weight: 600;
+}
+
+.books > .paginationContainer {
+  margin-top: 4rem;
+}
+
+.books .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.books .pagination .btn {
+  background-color: var(--color-1);
+  font-weight: 500;
+  padding: var(--padding-s-xs-v) var(--padding-s-xs-h);
+  border: 1px solid rgba(0, 0, 0, .3);
+  border-radius: 0.5rem;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.books .pagination .btn:not(.btn.disabled):hover, 
+.books .pagination .btn.active {
+  background-color: var(--color-3);
+  color: var(--color-1);
+  border: 1px solid var(--color-1);
+}
+
+.books .pagination .btn.disabled {
+  background-color: rgba(0, 0, 0, 0.05);
+  cursor: auto;
+}
+
+.books.favorites {
+  align-self: stretch;
+  margin: 4rem 0;
+}
+
+.books.favorites > .container {
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.bookDetail {
+  background-color: var(--color-1);
+
+  display: flex;
+  align-items: flex-start;
+  gap: 5rem;
+}
+
+.bookDetail > figure {
+  flex: 1;
+  
+  position: relative;
+  width: 100%;
+  height: 42rem;
+}
+
+.bookDetail > figure img {
+  border-radius: 1rem;
+}
+
+.bookDetail > .content {
+  flex: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.bookDetail > .content .title {
+  font-size: var(--font-size-d-l);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.bookDetail > .content .author {
+  font-size: var(--font-size-d-s);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.bookDetail > .content .slicedPrice {
+  margin-top: 4rem;
+  font-size: var(--font-size-d-m);
+  color: var(--color-8);
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+.bookDetail > .content .sellingPrice {
+  font-size: var(--font-size-d-l);
+  color: var(--color-4);
+  font-weight: 600;
+}
+
+.bookDetail > .content .favorite {
+  margin-top: 4rem;
+  color: var(--color-9);
+  cursor: pointer;
+}
+
+.bookInfo {
+  background-color: var(--color-6);
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.bookInfo > .tabs {
+  display: flex;
+  gap: 4rem;
+}
+
+.bookInfo > .tabs h3 {
+  font-size: var(--font-size-d-m);
+  font-weight: 700;
+  color: var(--color-8);
+  cursor: pointer;
+}
+
+.bookInfo > .tabs h3.active {
+  color: var(--color-11);
+}
+
+.bookInfo .additionalInfo {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  row-gap: 1rem;
+  column-gap: 5rem;
+}
+
+.bookInfo .additionalInfo h5 {
+  font-size: var(--font-size-s-s);
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1200px) {
+  .bookInfo .additionalInfo {
+    grid-template-columns: 1fr 4fr;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .books > .container {
+    grid-template-columns: repeat(2, minmax(20rem, 1fr));
+  }
+
+  .bookDetail > figure {
+    flex: 3;
+  }
+
+  .bookDetail > .content {
+    flex: 4;
+  }
+
+  .bookInfo .additionalInfo {
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .books > .container {
+    grid-template-columns: repeat(2, minmax(20rem, 1fr));
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .books > .container {
+    grid-template-columns: repeat(3, minmax(20rem, 1fr));
+  }
+
+  .books.favorites > .container {
+    grid-template-columns: repeat(3, minmax(20rem, 1fr));
+  }
+
+  .bookDetail > .content .title {
+    font-size: var(--font-size-s-xl);
+  }
+  
+  .bookDetail > .content .author {
+    font-size: var(--font-size-s-l);
+  }
+  
+  .bookDetail > .content .slicedPrice {
+    font-size: var(--font-size-s-l);
+  }
+  
+  .bookDetail > .content .sellingPrice {
+    font-size: var(--font-size-s-xl);
+  }
+  
+  .bookInfo > .tabs h3 {
+    font-size: var(--font-size-s-xl);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .books > .container {
+    grid-template-columns: repeat(2, minmax(20rem, 1fr));
+  }
+
+  .books.favorites > .container {
+    grid-template-columns: repeat(2, minmax(20rem, 1fr));
+  }
+
+  .bookDetail > figure, 
+  .bookDetail > .content {
+    flex: 1;
+  }
+
+  .bookInfo .additionalInfo {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .books > .sort {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .bookDetail {
+    flex-wrap: wrap;
+  }
+
+  .bookDetail > figure, 
+  .bookDetail > .content {
+    flex-basis: 100%;
+  }
+
+  .bookDetail > figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .bookDetail > figure img {
+    width: 30rem !important;
+    position: relative !important;
+  }
+
+  .bookInfo .additionalInfo {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bookDetail > .content .slicedPrice,
+  .bookDetail > .content .favorite {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .books > .container {
+    grid-template-columns: 25rem;
+    justify-content: center;
+  }
+
+  .books.favorites > .container {
+    grid-template-columns: 25rem;
+    justify-content: center;
+  }
+
+  .bookInfo > .tabs h3 {
+    font-size: var(--font-size-s-l);
+  }
+
+  .bookInfo .additionalInfo {
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .books .pagination li:has(.btn:not(.active):not(.arrow)) {
+    display: none;
+  }
+
+  .bookDetail > figure {
+    height: 40rem;
+  }
+
+  .bookDetail > figure img {
+    width: 100% !important;
+  }
+
+  .bookDetail > .content .title {
+    text-align: left;
+  }
+}

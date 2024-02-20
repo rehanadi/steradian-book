@@ -3,6 +3,7 @@
 import { useCallback } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { createQueryString } from '@/utils/navigation'
+import styles from '@/styles/Books.module.css'
 
 type PaginationFC = React.FC<{ pathname: string, page: number, pages: number }>
 
@@ -22,16 +23,16 @@ const Pagination: PaginationFC = ({ pathname, page, pages }) => {
   if (pages <= 1) return
 
   return (
-    <ul className="pagination">
+    <ul className={styles.pagination}>
       <li>
         {page === 1 ? (
           <button 
-            className={`btn disabled`}
+            className={`${styles.btn} ${styles.arrow} ${styles.disabled}`}
           >«</button>
         ) : (
           <button 
             onClick={() => redirect(page - 1)} 
-            className='btn'
+            className={`${styles.btn} ${styles.arrow}`}
           >«</button>
         )}
       </li>
@@ -40,7 +41,7 @@ const Pagination: PaginationFC = ({ pathname, page, pages }) => {
         <li key={i}>
           <button 
             onClick={() => redirect(i + 1)} 
-            className={`btn ${page === i + 1 ? 'active' : ''}`}
+            className={`${styles.btn} ${page === i + 1 ? styles.active : ''}`}
           >{i + 1}</button>
         </li>
       ))}
@@ -48,12 +49,12 @@ const Pagination: PaginationFC = ({ pathname, page, pages }) => {
       <li>
         {page === pages ? (
           <button 
-            className={`btn disabled`}
+            className={`${styles.btn} ${styles.arrow} ${styles.disabled}`}
           >»</button>
         ) : (
           <button 
             onClick={() => redirect(page + 1)} 
-            className='btn'
+            className={`${styles.btn} ${styles.arrow}`}
           >»</button>
         )}
       </li>

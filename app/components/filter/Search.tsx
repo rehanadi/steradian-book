@@ -4,6 +4,7 @@ import { useState, useCallback } from "react"
 import { FaSearch } from "react-icons/fa"
 import { useRouter, useSearchParams } from 'next/navigation'
 import { createQueryString } from '@/utils/navigation'
+import styles from '@/styles/Hero.module.css'
 
 const Search = () => {
   const router = useRouter()
@@ -23,7 +24,7 @@ const Search = () => {
 
   return (
     <form onSubmit={redirect}>
-      <span className="icon-search">
+      <span className={styles.iconSearch}>
         <FaSearch size={25} />
       </span>
 
@@ -34,7 +35,7 @@ const Search = () => {
         placeholder="Cari Judul Buku, Penulis, Penerbit" 
       />
 
-      <button className="btn-search">Search</button>
+      <button className={styles.btnSearch}>Search</button>
     </form>
   )
 }

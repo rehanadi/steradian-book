@@ -1,13 +1,16 @@
 'use client'
 
 import { signIn } from 'next-auth/react'
+import Button from '@/components/ui/Button'
+import styles from '@/styles/Header.module.css'
 
 const SignInButton = () => {
   return (
-    <button
+    <Button 
+      text='Masuk' 
+      className={styles.btnSign} 
       onClick={() => signIn()} 
-      className="btn-sign"
-    >Masuk</button>
+    />
   )
 }
 

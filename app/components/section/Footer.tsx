@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import { FaFacebookF, FaTwitter, FaInstagram, FaWhatsapp } from 'react-icons/fa'
+import styles from '@/styles/Footer.module.css'
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="content">
-        <div className="info">
+    <footer className={styles.footer}>
+      <div className={styles.content}>
+        <div className={styles.info}>
           <p>
             <strong>Steradian Book</strong> adalah platform yang menyediakan berbagai jenis buku terupdate dengan berbagai macam kategori favorit dan harga potongan yang menarik.
           </p>
@@ -14,8 +15,8 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="links">
-          <h3 className="title">
+        <div className={styles.links}>
+          <h3 className={styles.title}>
             Informasi
           </h3>
 
@@ -35,12 +36,12 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="newsletter">
-          <h3 className="title">
+        <div className={styles.newsletter}>
+          <h3 className={styles.title}>
             Newsletter
           </h3>
 
-          <p className="info">
+          <p className={styles.info}>
             Subscribe untuk informasi terupdate
           </p>
 
@@ -51,12 +52,12 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="author">
-        <p className="copy">
+      <div className={styles.author}>
+        <p className={styles.copy}>
           Steradian Book &copy; 2024 
         </p>
 
-        <div className="social">
+        <div className={styles.social}>
           <span>
             <FaFacebookF size={20} />
           </span>

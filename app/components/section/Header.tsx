@@ -3,37 +3,44 @@
 import { useState } from 'react'
 import Link from "next/link"
 import UserActions from "@/components/auth/UserActions"
+import styles from '@/styles/Header.module.css'
 
 const Header = () => {
   const [showNav, setShowNav] = useState(false)
 
   return (
-    <header className="header">
-      <div className="leading">
+    <header className={styles.header}>
+      <div className={styles.leading}>
         <Link href="/" className="logo">
           Steradian Book
         </Link>
       </div>
 
-      <div className={`collapse ${showNav ? 'show-nav' : ''}`}>
+      <div className={`${styles.collapse} ${showNav ? styles.showNav : ''}`}>
         <nav>
-          <Link href="/" className="active">Buku</Link>
+          <Link href="/" className={styles.active}>Buku</Link>
           <Link href="/">Tentang Kami</Link>
           <Link href="/">Kontak</Link>
         </nav>
 
-        <div className="actions">
+        <div className={styles.actions}>
           <UserActions />
         </div>
       </div>
 
       <div 
         onClick={() => setShowNav(!showNav)}
-        className="hamburger" 
+        className={styles.hamburger} 
       >
-        <div className={`hamburger-line ${showNav ? 'hamburger-line-1' : ''}`}></div>
-        <div className={`hamburger-line ${showNav ? 'hamburger-line-2' : ''}`}></div>
-        <div className={`hamburger-line ${showNav ? 'hamburger-line-3' : ''}`}></div>
+        <div 
+          className={`${styles.hamburgerLine} ${showNav ? styles.hamburgerLine1 : ''}`}
+        ></div>
+        <div 
+          className={`${styles.hamburgerLine} ${showNav ? styles.hamburgerLine2 : ''}`}
+        ></div>
+        <div 
+          className={`${styles.hamburgerLine} ${showNav ? styles.hamburgerLine3 : ''}`}
+        ></div>
       </div>
     </header>
   )

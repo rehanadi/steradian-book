@@ -4,6 +4,7 @@ import { useCallback } from "react"
 import { useRouter, useSearchParams } from 'next/navigation'
 import { createQueryString } from '@/utils/navigation'
 import { Sorting } from "@/constants/common"
+import styles from '@/styles/Books.module.css'
 
 const Sort = () => {
   const router = useRouter()
@@ -20,7 +21,7 @@ const Sort = () => {
   }
 
   return (
-    <fieldset className="fieldset-sort">
+    <fieldset className={styles.fieldsetSort}>
       <label htmlFor="filter-sort">Urutkan:</label>
       <select id="filter-sort" value={sortQuery} onChange={e => redirect(e.target.value)}>
         <option value="">Paling Sesuai</option>

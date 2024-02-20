@@ -2,6 +2,7 @@
 
 import { useState } from "react"  
 import { useRouter, useSearchParams } from 'next/navigation'
+import styles from '@/styles/Filter.module.css'
 
 const Price = () => {
   const router = useRouter()
@@ -37,8 +38,8 @@ const Price = () => {
   }
 
   return (
-    <form className="filter-price" onSubmit={redirect}>
-      <fieldset className="fieldset-price">
+    <form className={styles.filterPrice} onSubmit={redirect}>
+      <fieldset className={styles.fieldsetPrice}>
         <label htmlFor="minimum-price">Rp</label>
         <input 
           id="minimum-price"
@@ -49,7 +50,7 @@ const Price = () => {
         />
       </fieldset>
 
-      <fieldset className="fieldset-price">
+      <fieldset className={styles.fieldsetPrice}>
         <label htmlFor="maximum-price">Rp</label>
         <input 
           id="maximum-price"
@@ -60,8 +61,8 @@ const Price = () => {
         />
       </fieldset>
 
-      <div className="btn-container">
-        <button className="btn">
+      <div className={styles.btnContainer}>
+        <button className={styles.btnFilter}>
           Filter Harga
         </button>
       </div>

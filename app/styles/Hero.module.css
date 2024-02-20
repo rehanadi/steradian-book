@@ -1,0 +1,140 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  background-color: var(--color-3);
+  color: var(--color-1);
+  position: relative;
+}
+
+.hero > .formContainer {
+  margin-top: 2rem;
+}
+
+.hero form {
+  background-color: var(--color-1);
+  padding: var(--padding-s-s-v);
+  border-radius: 4rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero form > .iconSearch {
+  color: var(--color-3);
+  padding-left: 1rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.hero form > input[type="text"] {
+  border: none;
+  outline: none;
+  padding: var(--padding-s-s-v) var(--padding-s-m-h);
+  width: 40rem;
+}
+
+.hero form > input[type="text"]::placeholder {
+  font-size: var(--font-size-s-s);
+}
+
+.hero form > .btnSearch {
+  font-size: var(--font-size-s-s);
+  line-height: 1.6;
+  background-color: var(--color-5);
+  color: var(--color-1);
+  padding: var(--padding-s-s-v) var(--padding-s-l-h);
+  border: none;
+  border-radius: 4rem;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.hero form > .btnSearch:hover {
+  background-color: var(--color-4);
+}
+
+.hero figure {
+  position: absolute;
+  bottom: 0;
+  height: 80%;
+}
+
+.hero figure.bgLeft {
+  left: 5%;
+}
+
+.hero figure.bgRight {
+  right: 5%;
+}
+
+@media screen and (max-width: 1200px) {
+  .hero > .para {
+    width: 70%;
+  }
+
+  .hero figure.bgLeft {
+    left: 2%;
+  }
+
+  .hero figure.bgRight {
+    right: 2%;
+  }
+
+  .hero form > input[type="text"] {
+    width: 35rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .hero figure.bgLeft, 
+  .hero figure.bgRight {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hero form > input[type="text"] {
+    width: 30rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero form > .iconSearch {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero > .formContainer {
+    width: 100%;
+  }
+
+  .hero > .para {
+    width: 80%;
+  }
+
+  .hero form {
+    flex-direction: column;
+    align-items: stretch;
+    background: none;
+    gap: 2rem;
+  }
+
+  .hero form > input[type="text"] {
+    border-radius: 1rem;
+    width: 100%;    
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hero form > input[type="text"] {
+    width: auto;
+  }
+}

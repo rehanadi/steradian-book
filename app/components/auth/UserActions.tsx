@@ -5,6 +5,7 @@ import SignInButton from '@/components/auth/SignInButton'
 import SignOutButton from '@/components/auth/SignOutButton'
 import Link from 'next/link'
 import { FaHeart } from 'react-icons/fa'
+import styles from '@/styles/Header.module.css'
 
 const UserActions = () => {
   const { data: session } = useSession()
@@ -13,9 +14,9 @@ const UserActions = () => {
     <>
       {session ? (
         <>
-          <Link href="/favorites" className="favorite">
+          <Link href="/favorites" className={styles.favorite}>
             <FaHeart size={20} />
-            <span>Favorites</span>
+            <span>Favorit</span>
           </Link>
 
           <SignOutButton />

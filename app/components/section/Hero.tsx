@@ -1,27 +1,28 @@
 import Image from 'next/image'
 import Search from '@/components/filter/Search'
 import { heroLeftImage, heroRightImage } from '@/constants/images'
+import styles from '@/styles/Hero.module.css'
 
 const Hero = () => {
   return (
-    <section className="hero section-padding">
-      <h1 className="title section-title">
+    <section className={`${styles.hero} section-padding`}>
+      <h1 className={`${styles.title} section-title`}>
         Promo Buku Steradian
       </h1>
 
-      <p className="para section-para">
+      <p className={`${styles.para} section-para`}>
         Raih kesempatan untuk dapat diskon dan potongan harga dengan Promo Buku Steradian
       </p>
 
-      <div className="form-container">
+      <div className={styles.formContainer}>
         <Search />
       </div>
 
-      <figure className="bg-left">
+      <figure className={styles.bgLeft}>
         <Image loading='lazy' src={heroLeftImage} alt="Hero" />
       </figure>
 
-      <figure className="bg-right">
+      <figure className={styles.bgRight}>
         <Image loading='lazy' src={heroRightImage} alt="Hero" />
       </figure>
     </section>

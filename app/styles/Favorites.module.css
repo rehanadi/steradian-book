@@ -1,0 +1,36 @@
+.favorites {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.favorites .user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.favorites .user figure {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+
+.favorites .miniTitle {
+  font-size: var(--font-size-s-s);
+  font-weight: 600;
+}
+
+.favorites .title {
+  font-size: var(--font-size-d-l);
+}
+
+@media screen and (max-width: 800px) {
+  .favorites .title {
+    font-size: var(--font-size-s-xl);
+  }
+}

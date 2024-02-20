@@ -1,0 +1,170 @@
+.footer {
+  padding: var(--padding-d-l-v) var(--padding-d-xl-h);
+  background-color: var(--color-11);
+  color: var(--color-1);
+  
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.footer > .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.footer > .content > .info {
+  flex-basis: 40%;
+}
+
+.footer > .content > .info strong {
+  font-weight: 600;
+}
+
+.footer > .content > .info > p:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.footer > .content > .links {
+  flex-basis: 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer > .content > .links > .title,
+.footer > .content > .newsletter > .title {
+  font-size: var(--font-size-s-l);
+  font-weight: 600;
+}
+
+.footer > .content > .links > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer > .content > .links > ul > li > a {
+  color: var(--color-1);
+}
+
+.footer > .content > .links > ul > li > a:hover {
+  text-decoration: underline;
+}
+
+.footer > .content > .newsletter {
+  flex-basis: 30%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer > .content > .newsletter > form {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer > .content > .newsletter > form > input[type="email"] {
+  font-size: var(--font-size-s-s);
+  padding: var(--padding-s-s-v) var(--padding-s-s-h);
+  border: 1px solid var(--color-1);
+  border-radius: 1rem;
+  outline: none;
+  background-color: transparent;
+  color: var(--color-1);
+}
+
+.footer > .content > .newsletter > form > input[type="email"]::placeholder {
+  color: var(--color-1);
+}
+
+.footer > .content > .newsletter > form > input[type="submit"] {
+  font-size: var(--font-size-s-s);
+  font-weight: 700;
+  background-color: var(--color-4);
+  color: var(--color-1);
+  padding: var(--padding-s-xs-v) var(--padding-s-xs-h);
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.footer > .content > .newsletter > form > input[type="submit"]:hover {
+  background-color: var(--color-5);
+}
+
+.footer > .author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer > .author > .social {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer > .author > .social span {
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.footer > .author > .social span:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media screen and (max-width: 1200px) {
+  .footer > .content > .info {
+    flex-basis: 60%;
+  }
+
+  .footer > .content > .links {
+    flex-basis: 30%;
+  }
+
+  .footer > .content > .newsletter {
+    flex-basis: 50%;
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    padding: var(--padding-d-l-v) var(--padding-d-l-h);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer > .content {
+    gap: 4rem;
+  }
+
+  .footer > .content > .info,
+  .footer > .content > .links,
+  .footer > .content > .newsletter {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer > .content > .newsletter > form {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .footer > .content > .newsletter > form > input[type="email"] {
+    padding: var(--padding-s-m-v) var(--padding-s-m-h) !important;
+  }
+
+  .footer > .author {
+    flex-direction: column;
+  }
+}

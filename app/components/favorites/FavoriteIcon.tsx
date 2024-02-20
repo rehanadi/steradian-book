@@ -6,6 +6,7 @@ import { FaHeart, FaRegHeart } from 'react-icons/fa'
 import { 
   addFavorite, removeFavorite, existFavorite, useDispatch, useSelector 
 } from '@/store/index'
+import styles from '@/styles/Books.module.css'
 
 type FavoriteIconFC = React.FC<{ bookId: number }>
 
@@ -34,14 +35,14 @@ const FavoriteIcon: FavoriteIconFC = ({ bookId }) => {
       {isFavorite ? (
         <span 
           onClick={removeFromFavorite}
-          className="favorite"
+          className={styles.favorite}
         >
           <FaHeart size={75} />
         </span>  
       ) : (
         <span 
           onClick={addToFavorite}
-          className="favorite"
+          className={styles.favorite}
         >
           <FaRegHeart size={75} />
         </span>

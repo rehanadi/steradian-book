@@ -2,9 +2,12 @@
 
 import { useCallback } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
+import Loading from "@/components/section/Loading"
+import Error from "@/components/section/Error"
 import { createQueryString } from '@/utils/navigation'
 import { useGetCategoriesQuery } from "@/store/index"
 import type { Categories } from "@/types/categories"
+import styles from '@/styles/Filter.module.css'
 
 const Categories = () => {
   const router = useRouter()
@@ -18,9 +21,9 @@ const Categories = () => {
 
   const { data, isLoading, error } = useGetCategoriesQuery(null)
   
-  if (isLoading) return <section><h3>Loading...</h3></section>
-  if (error) return <section><h3>Something went wrong</h3></section>
-
+  if (isLoading) return <Loading />
+  if (error) return <Error />
+  
   const { categories = [] }: { categories: Categories } = data
 
   const redirect = (categorySlug: string) => {
@@ -28,18 +31,18 @@ const Categories = () => {
   }
 
   return (
-    <ul className="filter-categories">
+    <ul className={styles.filterCategories}>
       <li>
         <span 
           onClick={() => redirect('')} 
-          className={`${categoryQuery === '' ? 'active' : ''}`}
+          className={`${categoryQuery === '' ? styles.active : ''}`}
         >Semua</span>
       </li>
       {categories.map(category => (
         <li key={category.id}>
           <span 
             onClick={() => redirect(category.slug)}
-            className={`${categoryQuery.toLowerCase() === category.slug.toLowerCase() ? 'active' : ''}`}
+            className={`${categoryQuery.toLowerCase() === category.slug.toLowerCase() ? styles.active : ''}`}
           >{category.name}</span>
         </li>
       ))}

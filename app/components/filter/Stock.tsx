@@ -4,6 +4,7 @@ import { useCallback } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { createQueryString } from '@/utils/navigation'
 import { FilterStock } from '@/constants/common'
+import styles from '@/styles/Filter.module.css'
 
 const Stock = () => {
   const router = useRouter()
@@ -20,8 +21,8 @@ const Stock = () => {
   }
 
   return (
-    <div className="filter-stock">
-      <fieldset className="fieldset-stock">
+    <div className={styles.filterStock}>
+      <fieldset className={styles.fieldsetStock}>
         <input 
           type="radio" 
           id="stock-all" 
@@ -33,7 +34,7 @@ const Stock = () => {
         <label htmlFor="stock-all">Semua</label>
       </fieldset>
       
-      <fieldset className="fieldset-stock">
+      <fieldset className={styles.fieldsetStock}>
         <input 
           type="radio" 
           id="stock-available" 

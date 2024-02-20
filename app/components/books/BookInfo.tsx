@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Book } from "@/types/books"
+import styles from '@/styles/Books.module.css'
 
 type BookInfoFC = React.FC<{ book: Book }>
 
@@ -9,27 +10,27 @@ const BookInfo: BookInfoFC = ({ book }) => {
   const [tab, setTab] = useState(0)
 
   return (
-    <section className="book-info section-padding">
-      <div className="tabs">
+    <section className={`${styles.bookInfo} section-padding`}>
+      <div className={styles.tabs}>
         <h3 
           onClick={() => setTab(0)}
-          className={`${tab === 0 ? 'active' : ''}`}
+          className={`${tab === 0 ? styles.active : ''}`}
         >Deskripsi</h3>
 
         <h3 
           onClick={() => setTab(1)}
-          className={`${tab === 1 ? 'active' : ''}`}
+          className={`${tab === 1 ? styles.active : ''}`}
         >Informasi Buku</h3>
       </div>
 
       {tab === 0 && (
-        <div className="description">
+        <div className={styles.description}>
           {book.description}
         </div>
       )}
       
       {tab === 1 && (
-        <div className="additional-info">
+        <div className={styles.additionalInfo}>
           <h5>Jumlah Halaman</h5>
           <p>{book.pages}</p>
 

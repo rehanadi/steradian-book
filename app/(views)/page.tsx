@@ -4,6 +4,8 @@ import Catalog from "@/components/layout/Catalog"
 import FilterSection from '@/components/filter/FilterSection'
 import BooksSection from '@/components/books/BooksSection'
 
+export const dynamic = 'force-dynamic'
+
 const IndexPage = () => {
   return (
     <Suspense>

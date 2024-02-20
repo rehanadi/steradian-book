@@ -3,12 +3,13 @@ import { blurImage } from "@/constants/images"
 import { formatPrice } from "@/utils/currency"
 import FavoriteIcon from "@/components/favorites/FavoriteIcon"
 import type { Book } from "@/types/books"
+import styles from '@/styles/Books.module.css'
 
 type BookDetailFC = React.FC<{ book: Book }>
 
 const BookDetail: BookDetailFC = ({ book }) => {
   return (
-    <section className="book-detail section-padding">
+    <section className={`${styles.bookDetail} section-padding`}>
       <figure>
         <Image 
           fill 
@@ -20,14 +21,14 @@ const BookDetail: BookDetailFC = ({ book }) => {
         />
       </figure>
 
-      <div className="content">
-        <h1 className="title">{book.title.toUpperCase()}</h1>
+      <div className={styles.content}>
+        <h1 className={styles.title}>{book.title.toUpperCase()}</h1>
 
-        <p className="author">{book.author.toUpperCase()}</p>
+        <p className={styles.author}>{book.author.toUpperCase()}</p>
 
-        <div className="sliced-price">{formatPrice(book.sliced_price)}</div>
+        <div className={styles.slicedPrice}>{formatPrice(book.sliced_price)}</div>
 
-        <div className="selling-price">{formatPrice(book.selling_price)}</div>
+        <div className={styles.sellingPrice}>{formatPrice(book.selling_price)}</div>
 
         <FavoriteIcon bookId={book.id} />
       </div>

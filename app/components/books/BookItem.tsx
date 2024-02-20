@@ -3,14 +3,15 @@ import Link from 'next/link'
 import { formatPrice } from '@/utils/currency'
 import { blurImage } from '@/constants/images'
 import type { Book } from '@/types/books'
+import styles from '@/styles/Books.module.css'
 
 type BookItemFC = React.FC<{ book: Book }>
 
 const BookItem: BookItemFC = ({ book }) => {
   return (
-    <div className="book">
-      <div className="info">
-        <div className="image-container">
+    <div className={styles.book}>
+      <div className={styles.info}>
+        <div className={styles.imageContainer}>
           <Link href={`/books/${book.slug}`}>
             <figure>
               <Image 
@@ -25,20 +26,20 @@ const BookItem: BookItemFC = ({ book }) => {
           </Link>
 
           {!book.is_ready_stock && (
-            <span className="badge">Stok Habis</span>
+            <span className={styles.badge}>Stok Habis</span>
           )}
         </div>
 
         <Link href={`/books/${book.slug}`}>
-          <h4 className="title">{book.title.toUpperCase()}</h4>
+          <h4 className={styles.title}>{book.title.toUpperCase()}</h4>
         </Link>
         
-        <p className="author">{book.author.toUpperCase()}</p>
+        <p className={styles.author}>{book.author.toUpperCase()}</p>
       </div>
 
-      <div className="price">
-        <div className="sliced-price">{formatPrice(book.sliced_price)}</div>
-        <div className="selling-price">{formatPrice(book.selling_price)}</div>
+      <div className={styles.price}>
+        <div className={styles.slicedPrice}>{formatPrice(book.sliced_price)}</div>
+        <div className={styles.sellingPrice}>{formatPrice(book.selling_price)}</div>
       </div>
     </div>
   )
