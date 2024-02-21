@@ -92,18 +92,6 @@
 
 .filterPrice .btnFilter {
   width: 100%;
-  font-size: var(--font-size-s-s);
   line-height: 1.25;
-  background-color: var(--color-3);
-  color: var(--color-1);
   padding: var(--padding-s-s-v) var(--padding-s-s-h);
-  border: none;
-  border-radius: 1rem;
-  outline: none;
-  cursor: pointer;
-  transition: all 0.25s ease-in-out;
-}
-
-.filterPrice .btnFilter:hover {
-  background-color: var(--color-11);
 }

@@ -2,6 +2,7 @@
 
 import { useState } from "react"  
 import { useRouter, useSearchParams } from 'next/navigation'
+import Button from '@/components/ui/Button'
 import styles from '@/styles/Filter.module.css'
 
 const Price = () => {
@@ -62,9 +63,10 @@ const Price = () => {
       </fieldset>
 
       <div className={styles.btnContainer}>
-        <button className={styles.btnFilter}>
-          Filter Harga
-        </button>
+        <Button 
+          state='info'
+          className={styles.btnFilter}
+        >Filter Harga</Button>
       </div>
     </form>
   )

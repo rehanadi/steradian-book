@@ -13,20 +13,6 @@ const SignInSection: SignInSectionFC = ({ searchParams }) => {
       <div className={styles.content}>
         <h1 className={styles.title}>Sign In to Steradian Book</h1>
 
-        {/* 
-        <fieldset className="fieldset-email">
-          <label htmlFor="email">Email</label>
-          <input type="email" id="email" placeholder="Masukkan Email Anda" />
-        </fieldset>
-
-        <button className="btn-email">
-          <FaRegEnvelope size={20} />
-          <span>Continue with Email</span>
-        </button>
-
-        <p className="break">Or</p>
-        */}
-
         {authMessage && <h3>{authMessage}</h3>}
 
         <GoogleSignInButton callbackUrl={callbackUrl} />

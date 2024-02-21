@@ -129,7 +129,53 @@ img {
   text-align: center;
 }
 
+.btn {
+  font-size: var(--font-size-s-s);
+  background-color: var(--color-1);
+  color: var(--color-2);
+  padding: var(--padding-s-s-v) var(--padding-s-l-h);
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
 
+.btn-primary {
+  background-color: var(--color-4);
+  color: var(--color-1);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-5);
+}
+
+.btn-secondary {
+  background-color: var(--color-5);
+  color: var(--color-1);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-4);
+}
+
+.btn-info {
+  background-color: var(--color-3);
+  color: var(--color-1);
+}
+
+.btn-info:hover {
+  background-color: var(--color-11);
+}
+
+.btn-danger {
+  background-color: var(--color-10);
+  color: var(--color-1);
+}
+
+.btn-danger:hover {
+  background-color: var(--color-13);
+}
 
 .breadcrumb {
   padding: var(--padding-d-l-v) var(--padding-d-xl-h) 0;

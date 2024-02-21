@@ -82,21 +82,8 @@
   color: var(--color-1);
 }
 
-.footer > .content > .newsletter > form > input[type="submit"] {
-  font-size: var(--font-size-s-s);
-  font-weight: 700;
-  background-color: var(--color-4);
-  color: var(--color-1);
-  padding: var(--padding-s-xs-v) var(--padding-s-xs-h);
-  border: none;
-  border-radius: 1rem;
-  outline: none;
-  cursor: pointer;
-  transition: all 0.25s ease-in-out;
-}
-
-.footer > .content > .newsletter > form > input[type="submit"]:hover {
-  background-color: var(--color-5);
+.footer > .content > .newsletter > form > .btnSubscribe {
+  padding: var(--padding-s-s-v) var(--padding-s-xs-h);
 }
 
 .footer > .author {

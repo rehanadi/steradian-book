@@ -4,6 +4,7 @@ import { useState, useCallback } from "react"
 import { FaSearch } from "react-icons/fa"
 import { useRouter, useSearchParams } from 'next/navigation'
 import { createQueryString } from '@/utils/navigation'
+import Button from '@/components/ui/Button'
 import styles from '@/styles/Hero.module.css'
 
 const Search = () => {
@@ -35,7 +36,10 @@ const Search = () => {
         placeholder="Cari Judul Buku, Penulis, Penerbit" 
       />
 
-      <button className={styles.btnSearch}>Search</button>
+      <Button 
+        state='secondary'
+        className={styles.btnSearch}
+      >Search</Button>
     </form>
   )
 }

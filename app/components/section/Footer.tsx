@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { FaFacebookF, FaTwitter, FaInstagram, FaWhatsapp } from 'react-icons/fa'
+import Button from '@/components/ui/Button'
 import styles from '@/styles/Footer.module.css'
 
 const Footer = () => {
@@ -47,7 +48,11 @@ const Footer = () => {
 
           <form action="/">
             <input type="email" placeholder="Email address" />
-            <input type="submit" value="Subscribe" />
+
+            <Button 
+              state='primary' 
+              className={styles.btnSubscribe}
+            >Subscribe</Button>
           </form>
         </div>
       </div>

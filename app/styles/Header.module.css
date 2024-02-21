@@ -62,22 +62,6 @@
   gap: 1rem;
 }
 
-.header > .collapse > .actions > .btnSign {
-  font-size: var(--font-size-s-s);
-  background-color: var(--color-4);
-  color: var(--color-1);
-  padding: var(--padding-s-s-v) var(--padding-s-l-h);
-  border: none;
-  border-radius: 1rem;
-  outline: none;
-  cursor: pointer;
-  transition: all 0.25s ease-in-out;
-}
-
-.header > .collapse > .actions > .btnSign:hover {
-  background-color: var(--color-5);
-}
-
 .header .hamburger {
   position: fixed;
 }

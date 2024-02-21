@@ -44,20 +44,8 @@
 }
 
 .hero form > .btnSearch {
-  font-size: var(--font-size-s-s);
   line-height: 1.6;
-  background-color: var(--color-5);
-  color: var(--color-1);
-  padding: var(--padding-s-s-v) var(--padding-s-l-h);
-  border: none;
   border-radius: 4rem;
-  outline: none;
-  cursor: pointer;
-  transition: all 0.25s ease-in-out;
-}
-
-.hero form > .btnSearch:hover {
-  background-color: var(--color-4);
 }
 
 .hero figure {

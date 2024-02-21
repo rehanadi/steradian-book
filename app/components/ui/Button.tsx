@@ -1,13 +1,37 @@
+import { ReactNode } from "react"
+
+const config: {
+  state: {
+    [key: string]: string
+  }
+} = {
+  state: {
+    primary: "btn-primary",
+    secondary: "btn-secondary",
+    info: "btn-info",
+    danger: "btn-danger"
+  }
+}
+
 type ButtonFC = React.FC<{ 
-  text?: string, className?: string, onClick: React.MouseEventHandler<HTMLButtonElement> 
+  children: ReactNode
+  state?: 'primary' | 'secondary' | 'info' | 'danger'
+  className?: string
+  onClick?: React.MouseEventHandler<HTMLButtonElement> 
 }>
 
-const Button: ButtonFC = ({ text = '', className = '', onClick }) => {
+const Button: ButtonFC = ({ children, state = 'primary', className = '', onClick }) => {
+  const combineClassName = [
+    'btn',
+    config.state[state],
+    className
+  ].join(' ')
+
   return (
     <button
       onClick={onClick} 
-      className={className}
-    >{text}</button>
+      className={combineClassName}
+    >{children}</button>
   )
 }
 

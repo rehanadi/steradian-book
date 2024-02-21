@@ -36,37 +36,12 @@
   outline: none;
 }
 
-.signIn > .content button {
-  font-size: var(--font-size-s-s);
+.signIn > .content .btnGoogle {
   padding: var(--padding-s-m-v) var(--padding-s-l-h);
-  border: none;
-  border-radius: 1rem;
-  outline: none;
-  cursor: pointer;
-  transition: all 0.25s ease-in-out;
-
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-}
-
-.signIn > .content .btnEmail {
-  background-color: var(--color-4);
-  color: var(--color-1);
-}
-
-.signIn > .content .btnEmail:hover {
-  background-color: var(--color-5);
-}
-
-.signIn > .content .btnGoogle {
-  background-color: var(--color-10);
-  color: var(--color-1);
-}
-
-.signIn > .content .btnGoogle:hover {
-  background-color: var(--color-13);
 }
 
 .signIn > .content .break {
