@@ -13,7 +13,7 @@ const config: {
   }
 }
 
-type ButtonFC = React.FC<{ 
+export type ButtonFC = React.FC<{ 
   children: ReactNode
   state?: 'primary' | 'secondary' | 'info' | 'danger'
   className?: string

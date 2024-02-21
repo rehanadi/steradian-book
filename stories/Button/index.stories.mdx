@@ -1,0 +1,15 @@
+import 'app/styles/globals.css'
+import { Meta, Story } from '@storybook/addon-docs'
+import Button from './example/Sample'
+
+<Meta title="Components/Button" />
+
+# Button
+
+A most import component that simply let user interact with the app, [[Default Example](/docs/components-button-example--primary)] if you want to see in action
+
+export const Template = (args) => <Button {...args} />;
+
+<Story name="Introduction" args={{}}>
+  {Template.bind({})}
+</Story>
